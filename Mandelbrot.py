@@ -128,3 +128,5 @@ def julia(c, width, height, maxiter):
     full_output[top_height:, :] = np.flipud(np.fliplr(output_top))
     
     return full_output
+
+def tricorn()
