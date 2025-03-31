@@ -1,15 +1,22 @@
 from Mandelbrot import mandelbrot, julia, mandelbrot_point_cloud
+
 import numpy as np
-from manim import *
 import matplotlib.cm as cm
+
+from manim import *
+from manim_voiceover import VoiceoverScene
+from manim_voiceover.services.gtts import GTTSService
 
 # Configure Manim settings
 config.frame_rate = 15
 config.max_files_cached = 500
 
 # Scene 1: Introduction to the Mandelbrot Set
-class TextScene(Scene):
+class TextScene(VoiceoverScene):
     def construct(self):
+        # Set up speach service
+        self.set_speech_service(GTTSService(lang="en", tld="com"))
+
         # Title
         title = Text("What is the Mandelbrot Set?", font_size=48).to_edge(UP)
         self.play(Write(title), run_time=2)
@@ -79,8 +86,11 @@ class TextScene(Scene):
         self.wait(2)
         self.play(FadeOut(conclusion))
 
-class MandelbrotImageExample(Scene):
+class MandelbrotImageExample(VoiceoverScene):
     def construct(self):
+        # Set up speach service
+        self.set_speech_service(GTTSService(lang="en", tld="com"))
+
         # Title
         title = Text("How do you get the Images?", font_size=48).to_edge(UP)
         self.play(Write(title), run_time=2)
@@ -135,8 +145,11 @@ class MandelbrotImageExample(Scene):
         self.play(FadeOut(mandelbrot_mobject), run_time=2)
 
 # Scene 2: Visualizing a single point's orbit
-class OnePointExample(Scene):
+class OnePointExample(VoiceoverScene):
     def construct(self):
+        # Set up speach service
+        self.set_speech_service(GTTSService(lang="en", tld="com"))
+
         # Display formula in the upper-left corner
         text = MathTex(r"{z_0}^2 + c =", r"z_1").to_corner(UL)
         self.play(Write(ComplexPlane().add_coordinates()), run_time=2)
@@ -199,8 +212,11 @@ class OnePointExample(Scene):
         self.wait(2)
 
 # Scene 3: Mandelbrot Set visualization
-class MandelbrotScene(Scene):
+class MandelbrotScene(VoiceoverScene):
     def construct(self):
+        # Set up speach service
+        self.set_speech_service(GTTSService(lang="en", tld="com"))
+
         # Mandelbrot set parameters
         rmin, rmax = -2, 1
         cmax = 1.5 + 1j
@@ -267,8 +283,11 @@ class MandelbrotScene(Scene):
         self.play(FadeOut(dots, lines, text))
         self.wait(2)
 
-class MultiplePointsExample(Scene):
+class MultiplePointsExample(VoiceoverScene):
     def construct(self):
+        # Set up speach service
+        self.set_speech_service(GTTSService(lang="en", tld="com"))
+
         self.play(Write(ComplexPlane()))
 
         Dots = VGroup()
@@ -304,8 +323,11 @@ class MultiplePointsExample(Scene):
 
 
 # Scene 4: Introduction to Julia Sets
-class JuliaSetScene(Scene):
+class JuliaSetScene(VoiceoverScene):
     def construct(self):
+        # Set up speach service
+        self.set_speech_service(GTTSService(lang="en", tld="com"))
+
         # Title
         title = Text("What are Julia Sets?", font_size=48).to_edge(UP)
         self.play(Write(title), run_time=2)
@@ -368,8 +390,11 @@ class JuliaSetScene(Scene):
         julia_mobject.clear_updaters()
         self.play(FadeOut(julia_mobject), FadeOut(example_title))
 
-class AlternateDefintionWithJulia(Scene):
+class AlternateDefintionWithJulia(VoiceoverScene):
     def construct(self):
+        # Set up speach service
+        self.set_speech_service(GTTSService(lang="en", tld="com"))
+
         colormap = cm.get_cmap('inferno_r')
 
         def normalize_color(c):

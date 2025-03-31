@@ -62,6 +62,38 @@ plt.xlabel("Re(c)")
 plt.ylabel("Im(c)")
 plt.show()"""
 
+def multibrot(rmin, rmax, cmax, width, height, maxiter, exponent):
+    # Ensure height is even for symmetry
+    if height % 2 != 0:
+        height += 1
+
+    real = np.linspace(rmin, rmax, width, dtype=np.float32)
+    imag = np.linspace(0, cmax.imag, height // 2, dtype=np.float32)
+    c_real, c_imag = np.meshgrid(real, imag)
+
+    output = np.zeros((height // 2, width), dtype=np.uint16)
+    z_real = np.zeros_like(c_real)
+    z_imag = np.zeros_like(c_imag)
+    mask = np.ones_like(c_real, dtype=bool)
+
+    for i in range(maxiter):
+        zr2 = z_real[mask] ** 2
+        zi2 = z_imag[mask] ** 2
+
+        z_imag_new = (z_real[mask] + 1j * z_imag[mask]) ** exponent
+        z_real[mask] = z_imag_new.real + c_real[mask]
+        z_imag[mask] = z_imag_new.imag + c_imag[mask]
+
+        diverged = zr2 + zi2 >= 4.0
+        output[mask] = i
+        mask[mask] = ~diverged
+
+    output[output == maxiter - 1] = 0
+
+    # Mirror the top half to the bottom half
+    full_output = np.vstack([np.flipud(output), np.flipud(output[::-1, :])])
+    return full_output
+
 def julia(c, width, height, maxiter):
 
     real = np.linspace(-2, 2, width, dtype=np.float32)
