@@ -465,8 +465,7 @@ class Generalizations(VoiceoverScene):
             r"\item \textbf{Tricorn:} A fractal similar to the Mandelbrot set, but generated using the iteration formula $z = \overline{z}^2 + c$, where $\overline{z}$ is the complex conjugate of $z$."
             r"\item \textbf{4D Mandelbrot:} A higher-dimensional generalization of the Mandelbrot set, visualized by projecting 4D fractals into 3D or 2D spaces."
             r"\end{enumerate}",
-            font_size=36,
-            line_spacing=1.5
+            font_size=36
         ).next_to(Title, DOWN, buff=0.5)
 
         # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Multibrot set <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -479,11 +478,13 @@ class Generalizations(VoiceoverScene):
         maxiter = 256
         colormap = cm.get_cmap("inferno")
         exp = ValueTracker(0)
-
+        exp_indicator = MathTex("d =", "0.00", substrings_to_isolate='d').set_color_by_tex('d', RED).to_corner(UL)
+        exp_indicator.add_updater(lambda x: x[1].become(MathTex(f"d = {ValueTracker.get_value()}", color = BLUE).to_corner(UL)))
+        
         # Create a blank image with dimensions 3840x2160
         from PIL import Image
         blank_image = np.zeros((2160, 3840, 3), dtype=np.uint8)
-        old_multibrot = ImageMobject(Image.fromarray(blank_image)); multibrot = old_multibrot
+        multibrot = ImageMobject(Image.fromarray(blank_image))
 
         self.add(multibrot)
 
@@ -494,9 +495,61 @@ class Generalizations(VoiceoverScene):
             multibrot_mobject = ImageMobject(colored_image, scale_to_resolution=2160)
             old_multibrot.become(multibrot_mobject)
 
-        multibrot.add_updater(Update_multibrot())
+        multibrot.add_updater(Update_multibrot)
 
         # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Tricorn <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+        Tricorn_title = Tex(r"2. \quad Tricorn sets", font_size = 48).to_edge(UP)
+
+        tricorn = multibrot
+
+        def Update_tricorn(old_tricorn):
+            tricorn_set = multicorn(rmin, rmax, cmax, width, height, maxiter, exp)
+            normalized_set = np.log(1 + tricorn_set) / np.log(3) / np.log(maxiter)
+            colored_image = (colormap(normalized_set)[:, :, :3] * 255).astype(np.uint8)
+            tricorn_mobject = ImageMobject(colored_image, scale_to_resolution=2160)
+            old_tricorn.become(tricorn_mobject)
+
+        tricorn.add_updater(Update_tricorn)
+
+        # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 4d Mandelbrot <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+        buhdabrot_projections = ['zr_zi',
+                                'zr_cr',
+                                'zr_ci',
+                                'zi_cr',
+                                'zi_ci',
+                                'cr_ci']
+        
+        buhdabrot_R = project_histogram_4d_to_2d(histogram = buhdabrot(rmin, rmax, cmax, width, height, maxiter = 100, sample_size = 1e10),
+        projection_plane= "zi_ci",
+        width = 3840,
+        height = 2160,
+        )
+
+        buhdabrot_G = project_histogram_4d_to_2d(histogram = buhdabrot(rmin, rmax, cmax, width, height, maxiter = 500, sample_size = 1e10),
+        projection_plane= "zi_ci",
+        width = 3840,
+        height = 2160,
+        )
+
+        buhdabrot_B = project_histogram_4d_to_2d(histogram = buhdabrot(rmin, rmax, cmax, width, height, maxiter = 1000, sample_size = 1e10),
+        projection_plane= "zi_ci",
+        width = 3840,
+        height = 2160,
+        )
+
+        normalized_R = np.log(1 + buhdabrot_R) / np.log(3) / np.log(100)
+        normalized_G = np.log(1 + buhdabrot_G) / np.log(3) / np.log(500)
+        normalized_B = np.log(1 + buhdabrot_B) / np.log(3) / np.log(1000)
+
+        # Combine RGB channels into one image
+        combined_image = np.stack([normalized_R, normalized_G, normalized_B], axis=-1)
+        combined_image = (combined_image - combined_image.min()) / (combined_image.max() - combined_image.min())
+        combined_image = (combined_image * 255).astype(np.uint8)
+        buhdabrot_mobject = ImageMobject(combined_image, scale_to_resolution=2160)
+
+        # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> animations <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
         self.play(Write(Title), run_time=2)
         self.play(Write(contents), run_time=4)
@@ -505,5 +558,17 @@ class Generalizations(VoiceoverScene):
         
         self.play(Write(Multibrot_title))
         self.wait()
+        self.play(Write(exp_indicator), FadeOut(Multibrot_title))
         self.play(exp.animate.set_value(6), runtime=15, rate_func=double_smooth)
         self.play(exp.animate.set_value(-6), runtime=20, rate_func=double_smooth)
+        self.play(FadeOut(multibrot, exp_indicator))
+        multibrot.clear_updaters()
+        exp.set_value(0)
+
+        self.add(tricorn)
+        self.play(Write(Tricorn_title))
+        self.wait()
+        self.play(Write(exp_indicator), FadeOut(Tricorn_title))
+        self.play(exp.animate.set_value(6), runtime=15, rate_func=double_smooth)
+        self.play(exp.animate.set_value(-6), runtime=20, rate_func=double_smooth)
+        self.play(FadeOut(exp_indicator, tricorn))
