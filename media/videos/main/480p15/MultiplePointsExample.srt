@@ -1,0 +1,32 @@
+1
+00:00:02,000 --> 00:00:06,438
+This is the visualization of multiple points iterating under
+
+2
+00:00:06,538 --> 00:00:09,388
+the function z equals z squared plus c.
+
+3
+00:00:09,466 --> 00:00:13,602
+Now, let's explore the orbit of the
+
+4
+00:00:13,702 --> 00:00:17,838
+point c equals 0.335 minus 0.335 i.
+
+5
+00:00:19,466 --> 00:00:26,182
+Next, we move to the point c equals negative 0.2 minus 0.3 i.
+
+6
+00:00:29,466 --> 00:00:36,494
+Now, observe the behavior for c equals 0.33 plus 0.06 i.
+
+7
+00:00:39,466 --> 00:00:44,958
+Here is the orbit for c equals 0.5 plus 0.5 i.
+
+8
+00:00:49,466 --> 00:00:54,310
+Finally, we return to the origin, where c equals 0.
+

@@ -1,0 +1,10 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/wenmi/OneDrive/Documents/GitHub/2025_ISU/media/videos/main/480p15/partial_movie_files/MultiplePointsExample/1185818338_650271811_223132457.mp4'
+file 'file:C:/Users/wenmi/OneDrive/Documents/GitHub/2025_ISU/media/videos/main/480p15/partial_movie_files/MultiplePointsExample/624642324_3538005389_2563340307.mp4'
+file 'file:C:/Users/wenmi/OneDrive/Documents/GitHub/2025_ISU/media/videos/main/480p15/partial_movie_files/MultiplePointsExample/624642324_1790946550_1672060029.mp4'
+file 'file:C:/Users/wenmi/OneDrive/Documents/GitHub/2025_ISU/media/videos/main/480p15/partial_movie_files/MultiplePointsExample/624642324_196498598_1011644450.mp4'
+file 'file:C:/Users/wenmi/OneDrive/Documents/GitHub/2025_ISU/media/videos/main/480p15/partial_movie_files/MultiplePointsExample/624642324_2789493418_1342976631.mp4'
+file 'file:C:/Users/wenmi/OneDrive/Documents/GitHub/2025_ISU/media/videos/main/480p15/partial_movie_files/MultiplePointsExample/624642324_2335476978_4155747381.mp4'
+file 'file:C:/Users/wenmi/OneDrive/Documents/GitHub/2025_ISU/media/videos/main/480p15/partial_movie_files/MultiplePointsExample/624642324_320797024_874201211.mp4'
+file 'file:C:/Users/wenmi/OneDrive/Documents/GitHub/2025_ISU/media/videos/main/480p15/partial_movie_files/MultiplePointsExample/624642324_3124289741_2369878116.mp4'
+file 'file:C:/Users/wenmi/OneDrive/Documents/GitHub/2025_ISU/media/videos/main/480p15/partial_movie_files/MultiplePointsExample/624642324_1258544829_2356124168.mp4'

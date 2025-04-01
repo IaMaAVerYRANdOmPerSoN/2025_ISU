@@ -1,0 +1,24 @@
+1
+00:00:00,000 --> 00:00:02,875
+Here, we see a grid of Julia Sets, each
+
+2
+00:00:02,975 --> 00:00:07,148
+corresponding to a different point in the complex plane.
+
+3
+00:00:07,248 --> 00:00:10,095
+Observe how the Julia Sets vary as we
+
+4
+00:00:10,195 --> 00:00:12,884
+zoom out to reveal the entire grid.
+
+5
+00:00:22,248 --> 00:00:27,071
+Now, let's transform this grid of Julia Sets into the Mandelbrot
+
+6
+00:00:27,171 --> 00:00:30,764
+Set, which acts as a map for all these fractals.
+
