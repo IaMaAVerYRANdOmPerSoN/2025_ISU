@@ -11,22 +11,18 @@ In older images, members of the Mandelbrot set are colored black, and
 those not in the set are colored white, which looks like this.
 
 4
-00:00:14,000 --> 00:00:16,660
-Here is an example of such an image.
-
-5
-00:00:21,000 --> 00:00:24,667
+00:00:13,240 --> 00:00:16,907
 Modern images use a color map to show the number of
 
-6
-00:00:24,767 --> 00:00:29,837
+5
+00:00:17,007 --> 00:00:22,077
 iterations before divergence, assigning a color to each point based on
 
-7
-00:00:29,937 --> 00:00:35,156
+6
+00:00:22,177 --> 00:00:27,396
 iterations to divergence, and coloring them black if they never diverge.
 
-8
-00:00:35,200 --> 00:00:39,012
+7
+00:00:27,440 --> 00:00:31,252
 Here is an example of a modern Mandelbrot set image.
 

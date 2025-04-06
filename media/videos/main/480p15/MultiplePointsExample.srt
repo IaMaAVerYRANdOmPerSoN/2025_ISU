@@ -1,32 +1,28 @@
 1
-00:00:02,000 --> 00:00:06,438
-This is the visualization of multiple points iterating under
+00:00:02,000 --> 00:00:05,923
+Here is the visualization of multiple points iterating
 
 2
-00:00:06,538 --> 00:00:09,388
-the function z equals z squared plus c.
+00:00:06,023 --> 00:00:09,724
+under our dynamic system, with thier orbits traced.
 
 3
-00:00:09,466 --> 00:00:13,602
-Now, let's explore the orbit of the
+00:00:09,800 --> 00:00:12,844
+Some points fall into stable cycles;
 
 4
-00:00:13,702 --> 00:00:17,838
-point c equals 0.335 minus 0.335 i.
+00:00:13,000 --> 00:00:16,116
+Other points aproach a attracting limit point;
 
 5
-00:00:19,466 --> 00:00:26,182
-Next, we move to the point c equals negative 0.2 minus 0.3 i.
+00:00:16,266 --> 00:00:19,766
+Some points are attracted to a repelling limit point;
 
 6
-00:00:29,466 --> 00:00:36,494
-Now, observe the behavior for c equals 0.33 plus 0.06 i.
+00:00:19,866 --> 00:00:22,838
+And some points just shoot of to infinity;
 
 7
-00:00:39,466 --> 00:00:44,958
-Here is the orbit for c equals 0.5 plus 0.5 i.
-
-8
-00:00:49,466 --> 00:00:54,310
-Finally, we return to the origin, where c equals 0.
+00:00:23,000 --> 00:00:28,252
+Or at some points, like the origin, the function is it's own inverse!
 

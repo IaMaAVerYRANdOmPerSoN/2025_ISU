@@ -1,56 +1,8 @@
 1
-00:00:04,333 --> 00:00:08,038
-Let's visualize the orbit of a single point under
+00:00:04,300 --> 00:00:06,819
+Let's visualize the orbit of a single
 
 2
-00:00:08,138 --> 00:00:11,145
-the iteration z equals z squared plus c.
-
-3
-00:00:11,200 --> 00:00:14,940
-Updating the point to its next value in the sequence.
-
-4
-00:00:16,000 --> 00:00:18,708
-Moving from point 1 to point 2.
-
-5
-00:00:18,800 --> 00:00:22,540
-Updating the point to its next value in the sequence.
-
-6
-00:00:23,600 --> 00:00:26,332
-Moving from point 2 to point 3.
-
-7
-00:00:26,400 --> 00:00:30,140
-Updating the point to its next value in the sequence.
-
-8
-00:00:31,200 --> 00:00:34,676
-Returning to the starting point to complete the cycle.
-
-9
-00:00:35,733 --> 00:00:39,473
-Updating the point to its next value in the sequence.
-
-10
-00:00:40,533 --> 00:00:43,241
-Moving from point 1 to point 2.
-
-11
-00:00:43,333 --> 00:00:47,073
-Updating the point to its next value in the sequence.
-
-12
-00:00:48,133 --> 00:00:50,865
-Moving from point 2 to point 3.
-
-13
-00:00:50,933 --> 00:00:54,673
-Updating the point to its next value in the sequence.
-
-14
-00:00:55,733 --> 00:00:59,209
-Returning to the starting point to complete the cycle.
+00:00:06,919 --> 00:00:09,792
+point under the iteration of our function.
 

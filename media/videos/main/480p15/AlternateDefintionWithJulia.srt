@@ -7,18 +7,26 @@ Here, we see a grid of Julia Sets, each
 corresponding to a different point in the complex plane.
 
 3
-00:00:07,248 --> 00:00:10,095
-Observe how the Julia Sets vary as we
+00:00:07,266 --> 00:00:09,686
+Observe how the Image changes as we
 
 4
-00:00:10,195 --> 00:00:12,884
-zoom out to reveal the entire grid.
+00:00:09,786 --> 00:00:12,278
+increase the resolution of the grid.
 
 5
-00:00:22,248 --> 00:00:27,071
-Now, let's transform this grid of Julia Sets into the Mandelbrot
+00:00:37,266 --> 00:00:41,921
+Now, if we zoom in on only the center pixel of the grid, we
 
 6
-00:00:27,171 --> 00:00:30,764
-Set, which acts as a map for all these fractals.
+00:00:42,021 --> 00:00:47,078
+can see how the mandelbrot set acts as a map for the Julia Sets.
+
+7
+00:01:07,266 --> 00:01:10,635
+for a point p, if the julia set of z^2 +
+
+8
+00:01:10,735 --> 00:01:14,798
+p is connected, then p is in the mandelbrot set.
 

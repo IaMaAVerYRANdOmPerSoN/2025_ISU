@@ -502,5 +502,752 @@
     },
     "original_audio": "if-the-sequence-remains-bounded-c-is-in-the-15276ab0.mp3",
     "final_audio": "if-the-sequence-remains-bounded-c-is-in-the-15276ab0.mp3"
+  },
+  {
+    "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+    "input_data": {
+      "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+      "service": "gtts"
+    },
+    "original_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3",
+    "final_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3"
+  },
+  {
+    "input_text": "Observe how the Julia Sets vary as we zoom out to reveal the entire grid.",
+    "input_data": {
+      "input_text": "Observe how the Julia Sets vary as we zoom out to reveal the entire grid.",
+      "service": "gtts"
+    },
+    "original_audio": "observe-how-the-julia-sets-vary-as-we-zoom-out-to-d05d9b4e.mp3",
+    "final_audio": "observe-how-the-julia-sets-vary-as-we-zoom-out-to-d05d9b4e.mp3"
+  },
+  {
+    "input_text": "Now, let's transform this grid of Julia Sets into the Mandelbrot Set, which acts as a map for all these fractals.",
+    "input_data": {
+      "input_text": "Now, let's transform this grid of Julia Sets into the Mandelbrot Set, which acts as a map for all these fractals.",
+      "service": "gtts"
+    },
+    "original_audio": "now-let-s-transform-this-grid-of-julia-sets-into-2a1210ab.mp3",
+    "final_audio": "now-let-s-transform-this-grid-of-julia-sets-into-2a1210ab.mp3"
+  },
+  {
+    "input_text": "How do you get the images?",
+    "input_data": {
+      "input_text": "How do you get the images?",
+      "service": "gtts"
+    },
+    "original_audio": "how-do-you-get-the-images-a20fec45.mp3",
+    "final_audio": "how-do-you-get-the-images-a20fec45.mp3"
+  },
+  {
+    "input_text": "In older images, members of the Mandelbrot set are colored black, and those not in the set are colored white, which looks like this.",
+    "input_data": {
+      "input_text": "In older images, members of the Mandelbrot set are colored black, and those not in the set are colored white, which looks like this.",
+      "service": "gtts"
+    },
+    "original_audio": "in-older-images-members-of-the-mandelbrot-set-are-983aa291.mp3",
+    "final_audio": "in-older-images-members-of-the-mandelbrot-set-are-983aa291.mp3"
+  },
+  {
+    "input_text": "Here is an example of such an image.",
+    "input_data": {
+      "input_text": "Here is an example of such an image.",
+      "service": "gtts"
+    },
+    "original_audio": "here-is-an-example-of-such-an-image-8b3e0ca9.mp3",
+    "final_audio": "here-is-an-example-of-such-an-image-8b3e0ca9.mp3"
+  },
+  {
+    "input_text": "Modern images use a color map to show the number of iterations before divergence, assigning a color to each point based on iterations to divergence, and coloring them black if they never diverge.",
+    "input_data": {
+      "input_text": "Modern images use a color map to show the number of iterations before divergence, assigning a color to each point based on iterations to divergence, and coloring them black if they never diverge.",
+      "service": "gtts"
+    },
+    "original_audio": "modern-images-use-a-color-map-to-show-the-number-ca30192e.mp3",
+    "final_audio": "modern-images-use-a-color-map-to-show-the-number-ca30192e.mp3"
+  },
+  {
+    "input_text": "Here is an example of a modern Mandelbrot set image.",
+    "input_data": {
+      "input_text": "Here is an example of a modern Mandelbrot set image.",
+      "service": "gtts"
+    },
+    "original_audio": "here-is-an-example-of-a-modern-mandelbrot-set-ccdc6804.mp3",
+    "final_audio": "here-is-an-example-of-a-modern-mandelbrot-set-ccdc6804.mp3"
+  },
+  {
+    "input_text": "Lets see how the orbits of a couple points appear on the full set.",
+    "input_data": {
+      "input_text": "Lets see how the orbits of a couple points appear on the full set.",
+      "service": "gtts"
+    },
+    "original_audio": "lets-see-how-the-orbits-of-a-couple-points-appear-14f5ebfd.mp3",
+    "final_audio": "lets-see-how-the-orbits-of-a-couple-points-appear-14f5ebfd.mp3"
+  },
+  {
+    "input_text": "Here is the visualization of multiple points iterating under our dynamic system, with thier orbits traced.",
+    "input_data": {
+      "input_text": "Here is the visualization of multiple points iterating under our dynamic system, with thier orbits traced.",
+      "service": "gtts"
+    },
+    "original_audio": "here-is-the-visualization-of-multiple-points-7a8750f5.mp3",
+    "final_audio": "here-is-the-visualization-of-multiple-points-7a8750f5.mp3"
+  },
+  {
+    "input_text": "Some points fall into stable cycles;",
+    "input_data": {
+      "input_text": "Some points fall into stable cycles;",
+      "service": "gtts"
+    },
+    "original_audio": "some-points-fall-into-stable-cycles-36d4ba25.mp3",
+    "final_audio": "some-points-fall-into-stable-cycles-36d4ba25.mp3"
+  },
+  {
+    "input_text": "Other points aproach a attracting limit point;",
+    "input_data": {
+      "input_text": "Other points aproach a attracting limit point;",
+      "service": "gtts"
+    },
+    "original_audio": "other-points-aproach-a-attracting-limit-point-5c2e66a9.mp3",
+    "final_audio": "other-points-aproach-a-attracting-limit-point-5c2e66a9.mp3"
+  },
+  {
+    "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+    "input_data": {
+      "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+      "service": "gtts"
+    },
+    "original_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3",
+    "final_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3"
+  },
+  {
+    "input_text": "Observe how the Julia Sets vary as we zoom out to reveal the entire grid.",
+    "input_data": {
+      "input_text": "Observe how the Julia Sets vary as we zoom out to reveal the entire grid.",
+      "service": "gtts"
+    },
+    "original_audio": "observe-how-the-julia-sets-vary-as-we-zoom-out-to-d05d9b4e.mp3",
+    "final_audio": "observe-how-the-julia-sets-vary-as-we-zoom-out-to-d05d9b4e.mp3"
+  },
+  {
+    "input_text": "Now, let's transform this grid of Julia Sets into the Mandelbrot Set, which acts as a map for all these fractals.",
+    "input_data": {
+      "input_text": "Now, let's transform this grid of Julia Sets into the Mandelbrot Set, which acts as a map for all these fractals.",
+      "service": "gtts"
+    },
+    "original_audio": "now-let-s-transform-this-grid-of-julia-sets-into-2a1210ab.mp3",
+    "final_audio": "now-let-s-transform-this-grid-of-julia-sets-into-2a1210ab.mp3"
+  },
+  {
+    "input_text": "How do you get the images?",
+    "input_data": {
+      "input_text": "How do you get the images?",
+      "service": "gtts"
+    },
+    "original_audio": "how-do-you-get-the-images-a20fec45.mp3",
+    "final_audio": "how-do-you-get-the-images-a20fec45.mp3"
+  },
+  {
+    "input_text": "In older images, members of the Mandelbrot set are colored black, and those not in the set are colored white, which looks like this.",
+    "input_data": {
+      "input_text": "In older images, members of the Mandelbrot set are colored black, and those not in the set are colored white, which looks like this.",
+      "service": "gtts"
+    },
+    "original_audio": "in-older-images-members-of-the-mandelbrot-set-are-983aa291.mp3",
+    "final_audio": "in-older-images-members-of-the-mandelbrot-set-are-983aa291.mp3"
+  },
+  {
+    "input_text": "Here is an example of such an image.",
+    "input_data": {
+      "input_text": "Here is an example of such an image.",
+      "service": "gtts"
+    },
+    "original_audio": "here-is-an-example-of-such-an-image-8b3e0ca9.mp3",
+    "final_audio": "here-is-an-example-of-such-an-image-8b3e0ca9.mp3"
+  },
+  {
+    "input_text": "Modern images use a color map to show the number of iterations before divergence, assigning a color to each point based on iterations to divergence, and coloring them black if they never diverge.",
+    "input_data": {
+      "input_text": "Modern images use a color map to show the number of iterations before divergence, assigning a color to each point based on iterations to divergence, and coloring them black if they never diverge.",
+      "service": "gtts"
+    },
+    "original_audio": "modern-images-use-a-color-map-to-show-the-number-ca30192e.mp3",
+    "final_audio": "modern-images-use-a-color-map-to-show-the-number-ca30192e.mp3"
+  },
+  {
+    "input_text": "Here is an example of a modern Mandelbrot set image.",
+    "input_data": {
+      "input_text": "Here is an example of a modern Mandelbrot set image.",
+      "service": "gtts"
+    },
+    "original_audio": "here-is-an-example-of-a-modern-mandelbrot-set-ccdc6804.mp3",
+    "final_audio": "here-is-an-example-of-a-modern-mandelbrot-set-ccdc6804.mp3"
+  },
+  {
+    "input_text": "Lets see how the orbits of a couple points appear on the full set.",
+    "input_data": {
+      "input_text": "Lets see how the orbits of a couple points appear on the full set.",
+      "service": "gtts"
+    },
+    "original_audio": "lets-see-how-the-orbits-of-a-couple-points-appear-14f5ebfd.mp3",
+    "final_audio": "lets-see-how-the-orbits-of-a-couple-points-appear-14f5ebfd.mp3"
+  },
+  {
+    "input_text": "Here is the visualization of multiple points iterating under our dynamic system, with thier orbits traced.",
+    "input_data": {
+      "input_text": "Here is the visualization of multiple points iterating under our dynamic system, with thier orbits traced.",
+      "service": "gtts"
+    },
+    "original_audio": "here-is-the-visualization-of-multiple-points-7a8750f5.mp3",
+    "final_audio": "here-is-the-visualization-of-multiple-points-7a8750f5.mp3"
+  },
+  {
+    "input_text": "Some points fall into stable cycles;",
+    "input_data": {
+      "input_text": "Some points fall into stable cycles;",
+      "service": "gtts"
+    },
+    "original_audio": "some-points-fall-into-stable-cycles-36d4ba25.mp3",
+    "final_audio": "some-points-fall-into-stable-cycles-36d4ba25.mp3"
+  },
+  {
+    "input_text": "Other points aproach a attracting limit point;",
+    "input_data": {
+      "input_text": "Other points aproach a attracting limit point;",
+      "service": "gtts"
+    },
+    "original_audio": "other-points-aproach-a-attracting-limit-point-5c2e66a9.mp3",
+    "final_audio": "other-points-aproach-a-attracting-limit-point-5c2e66a9.mp3"
+  },
+  {
+    "input_text": "Some points are attracted to a repelling limit point;",
+    "input_data": {
+      "input_text": "Some points are attracted to a repelling limit point;",
+      "service": "gtts"
+    },
+    "original_audio": "some-points-are-attracted-to-a-repelling-limit-53f125dd.mp3",
+    "final_audio": "some-points-are-attracted-to-a-repelling-limit-53f125dd.mp3"
+  },
+  {
+    "input_text": "And some points just shoot of to infinity;",
+    "input_data": {
+      "input_text": "And some points just shoot of to infinity;",
+      "service": "gtts"
+    },
+    "original_audio": "and-some-points-just-shoot-of-to-infinity-c14e694b.mp3",
+    "final_audio": "and-some-points-just-shoot-of-to-infinity-c14e694b.mp3"
+  },
+  {
+    "input_text": "Or at some points, like the origin, the function is it's own inverse!",
+    "input_data": {
+      "input_text": "Or at some points, like the origin, the function is it's own inverse!",
+      "service": "gtts"
+    },
+    "original_audio": "or-at-some-points-like-the-origin-the-function-is-58c133b0.mp3",
+    "final_audio": "or-at-some-points-like-the-origin-the-function-is-58c133b0.mp3"
+  },
+  {
+    "input_text": "Let's visualize the orbit of a single point under the iteration of our function.",
+    "input_data": {
+      "input_text": "Let's visualize the orbit of a single point under the iteration of our function.",
+      "service": "gtts"
+    },
+    "original_audio": "let-s-visualize-the-orbit-of-a-single-point-under-467feeb2.mp3",
+    "final_audio": "let-s-visualize-the-orbit-of-a-single-point-under-467feeb2.mp3"
+  },
+  {
+    "input_text": "What is the Mandelbrot Set?",
+    "input_data": {
+      "input_text": "What is the Mandelbrot Set?",
+      "service": "gtts"
+    },
+    "original_audio": "what-is-the-mandelbrot-set-92cee29f.mp3",
+    "final_audio": "what-is-the-mandelbrot-set-92cee29f.mp3"
+  },
+  {
+    "input_text": "The Mandelbrot Set is a set of complex numbers c for which the function z equals z squared plus c does not diverge when iterated from z equals zero.",
+    "input_data": {
+      "input_text": "The Mandelbrot Set is a set of complex numbers c for which the function z equals z squared plus c does not diverge when iterated from z equals zero.",
+      "service": "gtts"
+    },
+    "original_audio": "the-mandelbrot-set-is-a-set-of-complex-numbers-c-cb5ad6f8.mp3",
+    "final_audio": "the-mandelbrot-set-is-a-set-of-complex-numbers-c-cb5ad6f8.mp3"
+  },
+  {
+    "input_text": "Now, let's look at some example iterations.",
+    "input_data": {
+      "input_text": "Now, let's look at some example iterations.",
+      "service": "gtts"
+    },
+    "original_audio": "now-let-s-look-at-some-example-iterations-22fecc93.mp3",
+    "final_audio": "now-let-s-look-at-some-example-iterations-22fecc93.mp3"
+  },
+  {
+    "input_text": "Here are the first few iterations for a specific complex number.",
+    "input_data": {
+      "input_text": "Here are the first few iterations for a specific complex number.",
+      "service": "gtts"
+    },
+    "original_audio": "here-are-the-first-few-iterations-for-a-specific-84a6edcc.mp3",
+    "final_audio": "here-are-the-first-few-iterations-for-a-specific-84a6edcc.mp3"
+  },
+  {
+    "input_text": "If the sequence remains bounded, c is in the Mandelbrot Set.",
+    "input_data": {
+      "input_text": "If the sequence remains bounded, c is in the Mandelbrot Set.",
+      "service": "gtts"
+    },
+    "original_audio": "if-the-sequence-remains-bounded-c-is-in-the-15276ab0.mp3",
+    "final_audio": "if-the-sequence-remains-bounded-c-is-in-the-15276ab0.mp3"
+  },
+  {
+    "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+    "input_data": {
+      "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+      "service": "gtts"
+    },
+    "original_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3",
+    "final_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3"
+  },
+  {
+    "input_text": "Observe how the Julia Sets vary as we zoom out to reveal the entire grid.",
+    "input_data": {
+      "input_text": "Observe how the Julia Sets vary as we zoom out to reveal the entire grid.",
+      "service": "gtts"
+    },
+    "original_audio": "observe-how-the-julia-sets-vary-as-we-zoom-out-to-d05d9b4e.mp3",
+    "final_audio": "observe-how-the-julia-sets-vary-as-we-zoom-out-to-d05d9b4e.mp3"
+  },
+  {
+    "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+    "input_data": {
+      "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+      "service": "gtts"
+    },
+    "original_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3",
+    "final_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3"
+  },
+  {
+    "input_text": "Observe how the Julia Sets vary as we zoom out to reveal the entire grid.",
+    "input_data": {
+      "input_text": "Observe how the Julia Sets vary as we zoom out to reveal the entire grid.",
+      "service": "gtts"
+    },
+    "original_audio": "observe-how-the-julia-sets-vary-as-we-zoom-out-to-d05d9b4e.mp3",
+    "final_audio": "observe-how-the-julia-sets-vary-as-we-zoom-out-to-d05d9b4e.mp3"
+  },
+  {
+    "input_text": "Now, let's transform this grid of Julia Sets into the Mandelbrot Set, which acts as a map for all these fractals.",
+    "input_data": {
+      "input_text": "Now, let's transform this grid of Julia Sets into the Mandelbrot Set, which acts as a map for all these fractals.",
+      "service": "gtts"
+    },
+    "original_audio": "now-let-s-transform-this-grid-of-julia-sets-into-2a1210ab.mp3",
+    "final_audio": "now-let-s-transform-this-grid-of-julia-sets-into-2a1210ab.mp3"
+  },
+  {
+    "input_text": "How do you get the images?",
+    "input_data": {
+      "input_text": "How do you get the images?",
+      "service": "gtts"
+    },
+    "original_audio": "how-do-you-get-the-images-a20fec45.mp3",
+    "final_audio": "how-do-you-get-the-images-a20fec45.mp3"
+  },
+  {
+    "input_text": "In older images, members of the Mandelbrot set are colored black, and those not in the set are colored white, which looks like this.",
+    "input_data": {
+      "input_text": "In older images, members of the Mandelbrot set are colored black, and those not in the set are colored white, which looks like this.",
+      "service": "gtts"
+    },
+    "original_audio": "in-older-images-members-of-the-mandelbrot-set-are-983aa291.mp3",
+    "final_audio": "in-older-images-members-of-the-mandelbrot-set-are-983aa291.mp3"
+  },
+  {
+    "input_text": "Modern images use a color map to show the number of iterations before divergence, assigning a color to each point based on iterations to divergence, and coloring them black if they never diverge.",
+    "input_data": {
+      "input_text": "Modern images use a color map to show the number of iterations before divergence, assigning a color to each point based on iterations to divergence, and coloring them black if they never diverge.",
+      "service": "gtts"
+    },
+    "original_audio": "modern-images-use-a-color-map-to-show-the-number-ca30192e.mp3",
+    "final_audio": "modern-images-use-a-color-map-to-show-the-number-ca30192e.mp3"
+  },
+  {
+    "input_text": "Here is an example of a modern Mandelbrot set image.",
+    "input_data": {
+      "input_text": "Here is an example of a modern Mandelbrot set image.",
+      "service": "gtts"
+    },
+    "original_audio": "here-is-an-example-of-a-modern-mandelbrot-set-ccdc6804.mp3",
+    "final_audio": "here-is-an-example-of-a-modern-mandelbrot-set-ccdc6804.mp3"
+  },
+  {
+    "input_text": "Lets see how the orbits of a couple points appear on the full set.",
+    "input_data": {
+      "input_text": "Lets see how the orbits of a couple points appear on the full set.",
+      "service": "gtts"
+    },
+    "original_audio": "lets-see-how-the-orbits-of-a-couple-points-appear-14f5ebfd.mp3",
+    "final_audio": "lets-see-how-the-orbits-of-a-couple-points-appear-14f5ebfd.mp3"
+  },
+  {
+    "input_text": "Here is the visualization of multiple points iterating under our dynamic system, with thier orbits traced.",
+    "input_data": {
+      "input_text": "Here is the visualization of multiple points iterating under our dynamic system, with thier orbits traced.",
+      "service": "gtts"
+    },
+    "original_audio": "here-is-the-visualization-of-multiple-points-7a8750f5.mp3",
+    "final_audio": "here-is-the-visualization-of-multiple-points-7a8750f5.mp3"
+  },
+  {
+    "input_text": "Some points fall into stable cycles;",
+    "input_data": {
+      "input_text": "Some points fall into stable cycles;",
+      "service": "gtts"
+    },
+    "original_audio": "some-points-fall-into-stable-cycles-36d4ba25.mp3",
+    "final_audio": "some-points-fall-into-stable-cycles-36d4ba25.mp3"
+  },
+  {
+    "input_text": "Other points aproach a attracting limit point;",
+    "input_data": {
+      "input_text": "Other points aproach a attracting limit point;",
+      "service": "gtts"
+    },
+    "original_audio": "other-points-aproach-a-attracting-limit-point-5c2e66a9.mp3",
+    "final_audio": "other-points-aproach-a-attracting-limit-point-5c2e66a9.mp3"
+  },
+  {
+    "input_text": "Some points are attracted to a repelling limit point;",
+    "input_data": {
+      "input_text": "Some points are attracted to a repelling limit point;",
+      "service": "gtts"
+    },
+    "original_audio": "some-points-are-attracted-to-a-repelling-limit-53f125dd.mp3",
+    "final_audio": "some-points-are-attracted-to-a-repelling-limit-53f125dd.mp3"
+  },
+  {
+    "input_text": "And some points just shoot of to infinity;",
+    "input_data": {
+      "input_text": "And some points just shoot of to infinity;",
+      "service": "gtts"
+    },
+    "original_audio": "and-some-points-just-shoot-of-to-infinity-c14e694b.mp3",
+    "final_audio": "and-some-points-just-shoot-of-to-infinity-c14e694b.mp3"
+  },
+  {
+    "input_text": "Or at some points, like the origin, the function is it's own inverse!",
+    "input_data": {
+      "input_text": "Or at some points, like the origin, the function is it's own inverse!",
+      "service": "gtts"
+    },
+    "original_audio": "or-at-some-points-like-the-origin-the-function-is-58c133b0.mp3",
+    "final_audio": "or-at-some-points-like-the-origin-the-function-is-58c133b0.mp3"
+  },
+  {
+    "input_text": "Let's visualize the orbit of a single point under the iteration of our function.",
+    "input_data": {
+      "input_text": "Let's visualize the orbit of a single point under the iteration of our function.",
+      "service": "gtts"
+    },
+    "original_audio": "let-s-visualize-the-orbit-of-a-single-point-under-467feeb2.mp3",
+    "final_audio": "let-s-visualize-the-orbit-of-a-single-point-under-467feeb2.mp3"
+  },
+  {
+    "input_text": "What is the Mandelbrot Set?",
+    "input_data": {
+      "input_text": "What is the Mandelbrot Set?",
+      "service": "gtts"
+    },
+    "original_audio": "what-is-the-mandelbrot-set-92cee29f.mp3",
+    "final_audio": "what-is-the-mandelbrot-set-92cee29f.mp3"
+  },
+  {
+    "input_text": "The Mandelbrot Set is a set of complex numbers c for which the function z equals z squared plus c does not diverge when iterated from z equals zero.",
+    "input_data": {
+      "input_text": "The Mandelbrot Set is a set of complex numbers c for which the function z equals z squared plus c does not diverge when iterated from z equals zero.",
+      "service": "gtts"
+    },
+    "original_audio": "the-mandelbrot-set-is-a-set-of-complex-numbers-c-cb5ad6f8.mp3",
+    "final_audio": "the-mandelbrot-set-is-a-set-of-complex-numbers-c-cb5ad6f8.mp3"
+  },
+  {
+    "input_text": "Now, let's look at some example iterations.",
+    "input_data": {
+      "input_text": "Now, let's look at some example iterations.",
+      "service": "gtts"
+    },
+    "original_audio": "now-let-s-look-at-some-example-iterations-22fecc93.mp3",
+    "final_audio": "now-let-s-look-at-some-example-iterations-22fecc93.mp3"
+  },
+  {
+    "input_text": "Here are the first few iterations for a specific complex number.",
+    "input_data": {
+      "input_text": "Here are the first few iterations for a specific complex number.",
+      "service": "gtts"
+    },
+    "original_audio": "here-are-the-first-few-iterations-for-a-specific-84a6edcc.mp3",
+    "final_audio": "here-are-the-first-few-iterations-for-a-specific-84a6edcc.mp3"
+  },
+  {
+    "input_text": "If the sequence remains bounded, c is in the Mandelbrot Set.",
+    "input_data": {
+      "input_text": "If the sequence remains bounded, c is in the Mandelbrot Set.",
+      "service": "gtts"
+    },
+    "original_audio": "if-the-sequence-remains-bounded-c-is-in-the-15276ab0.mp3",
+    "final_audio": "if-the-sequence-remains-bounded-c-is-in-the-15276ab0.mp3"
+  },
+  {
+    "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+    "input_data": {
+      "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+      "service": "gtts"
+    },
+    "original_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3",
+    "final_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3"
+  },
+  {
+    "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+    "input_data": {
+      "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+      "service": "gtts"
+    },
+    "original_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3",
+    "final_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3"
+  },
+  {
+    "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+    "input_data": {
+      "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+      "service": "gtts"
+    },
+    "original_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3",
+    "final_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3"
+  },
+  {
+    "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+    "input_data": {
+      "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+      "service": "gtts"
+    },
+    "original_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3",
+    "final_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3"
+  },
+  {
+    "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+    "input_data": {
+      "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+      "service": "gtts"
+    },
+    "original_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3",
+    "final_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3"
+  },
+  {
+    "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+    "input_data": {
+      "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+      "service": "gtts"
+    },
+    "original_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3",
+    "final_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3"
+  },
+  {
+    "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+    "input_data": {
+      "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+      "service": "gtts"
+    },
+    "original_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3",
+    "final_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3"
+  },
+  {
+    "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+    "input_data": {
+      "input_text": "Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane.",
+      "service": "gtts"
+    },
+    "original_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3",
+    "final_audio": "here-we-see-a-grid-of-julia-sets-each-2c5178a3.mp3"
+  },
+  {
+    "input_text": "Observe how the Image changes as we increase the resolution of the grid.",
+    "input_data": {
+      "input_text": "Observe how the Image changes as we increase the resolution of the grid.",
+      "service": "gtts"
+    },
+    "original_audio": "observe-how-the-image-changes-as-we-increase-the-08ff44ab.mp3",
+    "final_audio": "observe-how-the-image-changes-as-we-increase-the-08ff44ab.mp3"
+  },
+  {
+    "input_text": "Now, if we zoom in on only the center pixel of the grid, we can see how the mandelbrot set acts as a map for the Julia Sets.",
+    "input_data": {
+      "input_text": "Now, if we zoom in on only the center pixel of the grid, we can see how the mandelbrot set acts as a map for the Julia Sets.",
+      "service": "gtts"
+    },
+    "original_audio": "now-if-we-zoom-in-on-only-the-center-pixel-of-the-d3349bf7.mp3",
+    "final_audio": "now-if-we-zoom-in-on-only-the-center-pixel-of-the-d3349bf7.mp3"
+  },
+  {
+    "input_text": "for a point p, if the julia set of z^2 + p is connected, then p is in the mandelbrot set.",
+    "input_data": {
+      "input_text": "for a point p, if the julia set of z^2 + p is connected, then p is in the mandelbrot set.",
+      "service": "gtts"
+    },
+    "original_audio": "for-a-point-p-if-the-julia-set-of-z-2-p-is-199445d6.mp3",
+    "final_audio": "for-a-point-p-if-the-julia-set-of-z-2-p-is-199445d6.mp3"
+  },
+  {
+    "input_text": "How do you get the images?",
+    "input_data": {
+      "input_text": "How do you get the images?",
+      "service": "gtts"
+    },
+    "original_audio": "how-do-you-get-the-images-a20fec45.mp3",
+    "final_audio": "how-do-you-get-the-images-a20fec45.mp3"
+  },
+  {
+    "input_text": "In older images, members of the Mandelbrot set are colored black, and those not in the set are colored white, which looks like this.",
+    "input_data": {
+      "input_text": "In older images, members of the Mandelbrot set are colored black, and those not in the set are colored white, which looks like this.",
+      "service": "gtts"
+    },
+    "original_audio": "in-older-images-members-of-the-mandelbrot-set-are-983aa291.mp3",
+    "final_audio": "in-older-images-members-of-the-mandelbrot-set-are-983aa291.mp3"
+  },
+  {
+    "input_text": "Modern images use a color map to show the number of iterations before divergence, assigning a color to each point based on iterations to divergence, and coloring them black if they never diverge.",
+    "input_data": {
+      "input_text": "Modern images use a color map to show the number of iterations before divergence, assigning a color to each point based on iterations to divergence, and coloring them black if they never diverge.",
+      "service": "gtts"
+    },
+    "original_audio": "modern-images-use-a-color-map-to-show-the-number-ca30192e.mp3",
+    "final_audio": "modern-images-use-a-color-map-to-show-the-number-ca30192e.mp3"
+  },
+  {
+    "input_text": "Here is an example of a modern Mandelbrot set image.",
+    "input_data": {
+      "input_text": "Here is an example of a modern Mandelbrot set image.",
+      "service": "gtts"
+    },
+    "original_audio": "here-is-an-example-of-a-modern-mandelbrot-set-ccdc6804.mp3",
+    "final_audio": "here-is-an-example-of-a-modern-mandelbrot-set-ccdc6804.mp3"
+  },
+  {
+    "input_text": "Lets see how the orbits of a couple points appear on the full set.",
+    "input_data": {
+      "input_text": "Lets see how the orbits of a couple points appear on the full set.",
+      "service": "gtts"
+    },
+    "original_audio": "lets-see-how-the-orbits-of-a-couple-points-appear-14f5ebfd.mp3",
+    "final_audio": "lets-see-how-the-orbits-of-a-couple-points-appear-14f5ebfd.mp3"
+  },
+  {
+    "input_text": "Here is the visualization of multiple points iterating under our dynamic system, with thier orbits traced.",
+    "input_data": {
+      "input_text": "Here is the visualization of multiple points iterating under our dynamic system, with thier orbits traced.",
+      "service": "gtts"
+    },
+    "original_audio": "here-is-the-visualization-of-multiple-points-7a8750f5.mp3",
+    "final_audio": "here-is-the-visualization-of-multiple-points-7a8750f5.mp3"
+  },
+  {
+    "input_text": "Some points fall into stable cycles;",
+    "input_data": {
+      "input_text": "Some points fall into stable cycles;",
+      "service": "gtts"
+    },
+    "original_audio": "some-points-fall-into-stable-cycles-36d4ba25.mp3",
+    "final_audio": "some-points-fall-into-stable-cycles-36d4ba25.mp3"
+  },
+  {
+    "input_text": "Other points aproach a attracting limit point;",
+    "input_data": {
+      "input_text": "Other points aproach a attracting limit point;",
+      "service": "gtts"
+    },
+    "original_audio": "other-points-aproach-a-attracting-limit-point-5c2e66a9.mp3",
+    "final_audio": "other-points-aproach-a-attracting-limit-point-5c2e66a9.mp3"
+  },
+  {
+    "input_text": "Some points are attracted to a repelling limit point;",
+    "input_data": {
+      "input_text": "Some points are attracted to a repelling limit point;",
+      "service": "gtts"
+    },
+    "original_audio": "some-points-are-attracted-to-a-repelling-limit-53f125dd.mp3",
+    "final_audio": "some-points-are-attracted-to-a-repelling-limit-53f125dd.mp3"
+  },
+  {
+    "input_text": "And some points just shoot of to infinity;",
+    "input_data": {
+      "input_text": "And some points just shoot of to infinity;",
+      "service": "gtts"
+    },
+    "original_audio": "and-some-points-just-shoot-of-to-infinity-c14e694b.mp3",
+    "final_audio": "and-some-points-just-shoot-of-to-infinity-c14e694b.mp3"
+  },
+  {
+    "input_text": "Or at some points, like the origin, the function is it's own inverse!",
+    "input_data": {
+      "input_text": "Or at some points, like the origin, the function is it's own inverse!",
+      "service": "gtts"
+    },
+    "original_audio": "or-at-some-points-like-the-origin-the-function-is-58c133b0.mp3",
+    "final_audio": "or-at-some-points-like-the-origin-the-function-is-58c133b0.mp3"
+  },
+  {
+    "input_text": "Let's visualize the orbit of a single point under the iteration of our function.",
+    "input_data": {
+      "input_text": "Let's visualize the orbit of a single point under the iteration of our function.",
+      "service": "gtts"
+    },
+    "original_audio": "let-s-visualize-the-orbit-of-a-single-point-under-467feeb2.mp3",
+    "final_audio": "let-s-visualize-the-orbit-of-a-single-point-under-467feeb2.mp3"
+  },
+  {
+    "input_text": "What is the Mandelbrot Set?",
+    "input_data": {
+      "input_text": "What is the Mandelbrot Set?",
+      "service": "gtts"
+    },
+    "original_audio": "what-is-the-mandelbrot-set-92cee29f.mp3",
+    "final_audio": "what-is-the-mandelbrot-set-92cee29f.mp3"
+  },
+  {
+    "input_text": "The Mandelbrot Set is a set of complex numbers c for which the function z equals z squared plus c does not diverge when iterated from z equals zero.",
+    "input_data": {
+      "input_text": "The Mandelbrot Set is a set of complex numbers c for which the function z equals z squared plus c does not diverge when iterated from z equals zero.",
+      "service": "gtts"
+    },
+    "original_audio": "the-mandelbrot-set-is-a-set-of-complex-numbers-c-cb5ad6f8.mp3",
+    "final_audio": "the-mandelbrot-set-is-a-set-of-complex-numbers-c-cb5ad6f8.mp3"
+  },
+  {
+    "input_text": "Now, let's look at some example iterations.",
+    "input_data": {
+      "input_text": "Now, let's look at some example iterations.",
+      "service": "gtts"
+    },
+    "original_audio": "now-let-s-look-at-some-example-iterations-22fecc93.mp3",
+    "final_audio": "now-let-s-look-at-some-example-iterations-22fecc93.mp3"
+  },
+  {
+    "input_text": "Here are the first few iterations for a specific complex number.",
+    "input_data": {
+      "input_text": "Here are the first few iterations for a specific complex number.",
+      "service": "gtts"
+    },
+    "original_audio": "here-are-the-first-few-iterations-for-a-specific-84a6edcc.mp3",
+    "final_audio": "here-are-the-first-few-iterations-for-a-specific-84a6edcc.mp3"
+  },
+  {
+    "input_text": "If the sequence remains bounded, c is in the Mandelbrot Set.",
+    "input_data": {
+      "input_text": "If the sequence remains bounded, c is in the Mandelbrot Set.",
+      "service": "gtts"
+    },
+    "original_audio": "if-the-sequence-remains-bounded-c-is-in-the-15276ab0.mp3",
+    "final_audio": "if-the-sequence-remains-bounded-c-is-in-the-15276ab0.mp3"
   }
 ]

@@ -1,32 +1,4 @@
 1
-00:00:00,000 --> 00:00:03,428
-This is the Mandelbrot set, a fascinating fractal
-
-2
-00:00:03,528 --> 00:00:07,604
-that emerges from iterating a simple mathematical formula.
-
-3
-00:00:07,666 --> 00:00:15,174
-Now, let's explore the orbit of the point c equals 0.35 plus 0.35 i.
-
-4
-00:00:15,266 --> 00:00:23,350
-Now, let's explore the orbit of the point c equals -0.10 plus 0.96 i.
-
-5
-00:00:23,400 --> 00:00:31,268
-Now, let's explore the orbit of the point c equals 0.00 plus 1.00 i.
-
-6
-00:00:31,333 --> 00:00:39,489
-Now, let's explore the orbit of the point c equals -0.10 plus 0.75 i.
-
-7
-00:00:39,533 --> 00:00:47,569
-Now, let's explore the orbit of the point c equals 0.00 plus 0.00 i.
-
-8
-00:00:47,666 --> 00:00:55,606
-Now, let's explore the orbit of the point c equals -0.34 plus 0.34 i.
+00:00:00,000 --> 00:00:04,556
+Lets see how the orbits of a couple points appear on the full set.
 
