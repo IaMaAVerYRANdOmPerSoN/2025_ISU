@@ -121,9 +121,6 @@ class MandelbrotImageExample(VoiceoverScene):
         with self.voiceover(text="Here is an example of a modern Mandelbrot set image."):
             self.play(FadeIn(mandelbrot_mobject), run_time=3)
 
-
-        self.play(FadeOut(mandelbrot_mobject), run_time=2)
-
 # Scene 2: Visualizing a single point's orbit
 class OnePointExample(VoiceoverScene):
     def construct(self):
@@ -293,7 +290,7 @@ class MultiplePointsExample(VoiceoverScene):
                                  mandelbrot_point_cloud(c.get_value(), 25)[1:])
             ])
         ))
-        text.add_updater(lambda x: x.become(MathTex(f"f_{{c.get_value():.2f}}(z) = z^2 {'+' if c.get_value().real >= 0 else '-'} {abs(c.get_value()).real:.2f} {'+' if c.get_value().imag >= 0 else '-'} {abs(c.get_value().imag):.2f}i").to_corner(UL)))
+        text.add_updater(lambda x: x.become(MathTex(f"f_{{{c.get_value():.2f}}}(z) = z^2 {'+' if c.get_value().real >= 0 else '-'} {abs(c.get_value()).real:.2f} {'+' if c.get_value().imag >= 0 else '-'} {abs(c.get_value().imag):.2f}i").to_corner(UL)))
 
         self.add(Dots, lines)
         with self.voiceover(text="Here is the visualization of multiple points iterating under our dynamic system, with thier orbits traced."):
@@ -310,6 +307,7 @@ class MultiplePointsExample(VoiceoverScene):
         for point, narration in points:
             with self.voiceover(text=narration) as tracker:
                 self.play(c.animate.set_value(point), run_time=tracker.duration)
+                self.wait(3)
 
         self.play(FadeOut(Dots, lines), run_time=3)
 
@@ -347,13 +345,15 @@ class JuliaSetScene(VoiceoverScene):
         ).next_to(description, DOWN, buff=0.5)
         with self.voiceover(text="The Mandelbrot Set acts as a map for Julia Sets. Each point in the Mandelbrot Set corresponds to a unique Julia Set. Points inside the Mandelbrot Set produce connected Julia Sets, while points outside produce infinitely disconnected, dust-like Julia Sets."):
             self.play(Write(relationship), run_time=6)
-        self.wait(5)
+        self.wait(3)
 
         # Transition to example
         with self.voiceover(text="Now, let's look at an example of a Julia Set."):
             self.play(FadeOut(title), FadeOut(description))
         example_title = Text("Example Julia Set", font_size=42).to_edge(UP)
         self.play(Write(example_title), run_time=2)
+
+        self.wait(2)
 
         # Generate initial Julia set image
         c = ComplexValueTracker(-0.8 + 0.156j)  # Example constant for Julia set
@@ -369,7 +369,7 @@ class JuliaSetScene(VoiceoverScene):
             julia_set = julia(c.get_value(), 2160, 2160, 256)
             normalized_set = np.log(1 + julia_set) / np.log(3) / np.log(256)
             colored_image = (colormap(normalized_set)[:, :, :3] * 255).astype(np.uint8)
-            mobject.become(colored_image)
+            mobject.become(ImageMobject(colored_image))
 
         julia_mobject.add_updater(update_julia)
 
@@ -378,9 +378,13 @@ class JuliaSetScene(VoiceoverScene):
             self.play(FadeIn(julia_mobject), run_time=2)
         with self.voiceover(text="Now, let's explore how the Julia Set changes as we vary the value of c."):
             self.play(c.animate.set_value(0.355 - 0.335j), run_time=10)
+            self.wait(2)
             self.play(c.animate.set_value(0.36 + 1j), run_time=10)
+            self.wait(2)
             self.play(c.animate.set_value(0.33 + 0.06j), run_time=10)
+            self.wait(2)
             self.play(c.animate.set_value(0 + 0j), run_time=10)
+            self.wait(2)
 
         # Cleanup
         julia_mobject.clear_updaters()
@@ -444,6 +448,7 @@ class AlternateDefintionWithJulia(VoiceoverScene):
 
 
 class Generalizations(VoiceoverScene):
+
     def construct(self):
         # Set up speach service
         self.set_speech_service(GTTSService(lang="en", tld="com"))
@@ -466,47 +471,45 @@ class Generalizations(VoiceoverScene):
 
         rmin, rmax = -2, 1
         cmax = 1.5 + 1j
-        width, height = 300, 225
+        width, height = 3840, 2160
         maxiter = 256
         colormap = cm.get_cmap("inferno")
         exp = ValueTracker(0)
         exp_indicator = MathTex("d =", "0.00", substrings_to_isolate='d').set_color_by_tex('d', RED).to_corner(UL)
-        exp_indicator.add_updater(lambda x: x[1].become(MathTex(f"d = {ValueTracker.get_value()}", color = BLUE).to_corner(UL)))
+        exp_indicator.add_updater(lambda x: x[1].become(MathTex(f"d = {exp.get_value()}", color = BLUE).set_color_by_tex('d', RED).to_corner(UL)))
         
         # Create a blank image with dimensions 3840x2160
         from PIL import Image
         blank_image = np.zeros((2160, 3840, 3), dtype=np.uint8)
-        multibrot = ImageMobject(Image.fromarray(blank_image))
+        multibrot_image = ImageMobject(Image.fromarray(blank_image))
 
-        self.add(multibrot)
+        self.add(multibrot_image)
 
         def Update_multibrot(old_multibrot):
-            multibrot_set = multibrot(rmin, rmax, cmax, width, height, maxiter, exp)
+            multibrot_set = multibrot(rmin, rmax, cmax, width, height, maxiter, exp.get_value())
             normalized_set = np.log(1 + multibrot_set) / np.log(3) / np.log(maxiter)
             colored_image = (colormap(normalized_set)[:, :, :3] * 255).astype(np.uint8)
             multibrot_mobject = ImageMobject(colored_image, scale_to_resolution=2160)
             old_multibrot.become(multibrot_mobject)
 
-        multibrot.add_updater(Update_multibrot)
+        multibrot_image.add_updater(Update_multibrot)
 
         # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Tricorn <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
         Tricorn_title = Tex(r"2. \quad Tricorn sets", font_size = 48).to_edge(UP)
 
-        tricorn = multibrot
+        tricorn = multibrot_image.copy()
 
         def Update_tricorn(old_tricorn):
-            tricorn_set = multicorn(rmin, rmax, cmax, width, height, maxiter, exp)
+            tricorn_set = multicorn(rmin, rmax, cmax, width, height, maxiter, exp.get_value())
             normalized_set = np.log(1 + tricorn_set) / np.log(3) / np.log(maxiter)
             colored_image = (colormap(normalized_set)[:, :, :3] * 255).astype(np.uint8)
             tricorn_mobject = ImageMobject(colored_image, scale_to_resolution=2160)
             old_tricorn.become(tricorn_mobject)
 
-        tricorn.add_updater(Update_tricorn)
-
         # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 4d Mandelbrot <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-        buhdabrot_projections = ['zr_zi',
+        """buhdabrot_projections = ['zr_zi',
                                 'zr_cr',
                                 'zr_ci',
                                 'zi_cr',
@@ -539,7 +542,7 @@ class Generalizations(VoiceoverScene):
         combined_image = np.stack([normalized_R, normalized_G, normalized_B], axis=-1)
         combined_image = (combined_image - combined_image.min()) / (combined_image.max() - combined_image.min())
         combined_image = (combined_image * 255).astype(np.uint8)
-        buhdabrot_mobject = ImageMobject(combined_image, scale_to_resolution=2160)
+        buhdabrot_mobject = ImageMobject(combined_image, scale_to_resolution=2160)"""
 
         # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> animations <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
@@ -556,19 +559,80 @@ class Generalizations(VoiceoverScene):
         with self.voiceover(text="The Multibrot Sets are a generalization of the Mandelbrot Set, where the exponent in the iteration formula is replaced with a diffrent degree."):
             self.play(Write(exp_indicator), FadeOut(Multibrot_title))
         with self.voiceover(text="Observe how the fractal changes as we vary the exponent."):
-            self.play(exp.animate.set_value(6), runtime=15, rate_func=double_smooth)
-            self.play(exp.animate.set_value(-6), runtime=20, rate_func=double_smooth)
-        self.play(FadeOut(multibrot, exp_indicator))
-        multibrot.clear_updaters()
+            self.play(exp.animate.set_value(6), run_time=15, rate_func=double_smooth)
+            self.play(exp.animate.set_value(-6), run_time=20, rate_func=double_smooth)
+        self.play(FadeOut(multibrot_image, exp_indicator))
+        multibrot_image.clear_updaters()
         exp.set_value(0)
 
         with self.voiceover(text="Next, we explore the Tricorn sets."):
             self.add(tricorn)
             self.play(Write(Tricorn_title))
         self.wait()
-        with self.voiceover(text="The Tricorn is generated using the iteration formula where the complex conjugate of z is squared and added to c, istead of just z squared."):
+        with self.voiceover(text="The Tricorn is generated using the iteration formula where the complex conjugate of z is squared and added to c, instead of just z squared."):
             self.play(Write(exp_indicator), FadeOut(Tricorn_title))
+        tricorn.add_updater(Update_tricorn)
         with self.voiceover(text="Let's observe the changes as we vary the exponent here as well."):
             self.play(exp.animate.set_value(6), runtime=15, rate_func=double_smooth)
             self.play(exp.animate.set_value(-6), runtime=20, rate_func=double_smooth)
         self.play(FadeOut(exp_indicator, tricorn))
+
+class ZoomSequence(VoiceoverScene):
+
+    def construct(self):
+        # Set up speech service
+        self.set_speech_service(GTTSService(lang="en", tld="com"))
+
+        # Title
+        title = Text("Zooming into the Mandelbrot Set", font_size=48).to_edge(UP)
+        with self.voiceover(text="Zooming into the Mandelbrot Set"):
+            self.play(Write(title), run_time=2)
+
+        # Description
+        description = Text(
+            "The Mandelbrot Set is infinitely complex.\n"
+            "Let's explore its intricate details by zooming in.",
+            font_size=36,
+            line_spacing=1.5
+        ).next_to(title, DOWN, buff=0.5)
+        with self.voiceover(text="The Mandelbrot Set is infinitely complex. Let's explore its intricate details by zooming in."):
+            self.play(Write(description), run_time=4)
+        self.wait(5)
+
+        # Zoom sequence
+        zoom_points = [
+            0.743643887037151 + 0.131825904205330j,
+            -2 + 0j,
+            -0.75 + 0j,
+            0.25 + 0.5j,
+            0.25+ 0j
+        ]
+            
+        zoom_lvl = ValueTracker(1)
+
+        colormap = cm.get_cmap("inferno")
+
+        from PIL import Image
+        blank_image = np.zeros((2160, 3840, 3), dtype=np.uint8)
+        mandelbrot_image = ImageMobject(Image.fromarray(blank_image))
+
+        self.add(mandelbrot_image)
+
+        for i in zoom_points:
+
+            def Update_zoom(old_mobject):
+                mandelbrot_set = mandelbrot_from_center(centerpoint = i, zoom = zoom_lvl.get_value(), width=3840, height = 2160, maxiter= int(zoom_lvl.get_value()) * 30)
+                normalized_set = np.log(1 + mandelbrot_set) / np.log(3) / np.log(256)
+                colored_image = (colormap(normalized_set)[:, :, :3] * 255).astype(np.uint8)
+                mandelbrot_mobject = ImageMobject(colored_image, scale_to_resolution=2160)
+                old_mobject.become(mandelbrot_mobject)
+
+            mandelbrot_image.add_updater(Update_zoom)
+
+            self.play(zoom_lvl.animate.set_value(500), run_time=50, rate_func=double_smooth)
+            self.wait(2)
+            self.play(zoom_lvl.animate.set_value(1), run_time=1, rate_func=double_smooth)
+            self.wait()
+
+            mandelbrot_image.remove_updater(Update_zoom)
+

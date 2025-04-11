@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/wenmi/OneDrive/Documents/GitHub/2025_ISU/media/videos/main/2160p15/partial_movie_files/MandelbrotImageExample/3487304908_3038589478_223132457.mp4'
+file 'file:C:/Users/wenmi/OneDrive/Documents/GitHub/2025_ISU/media/videos/main/2160p15/partial_movie_files/MandelbrotImageExample/1642092552_3650295377_3831988495.mp4'
+file 'file:C:/Users/wenmi/OneDrive/Documents/GitHub/2025_ISU/media/videos/main/2160p15/partial_movie_files/MandelbrotImageExample/1642092552_3138451654_1691432326.mp4'
+file 'file:C:/Users/wenmi/OneDrive/Documents/GitHub/2025_ISU/media/videos/main/2160p15/partial_movie_files/MandelbrotImageExample/1642092552_111963763_1793681382.mp4'
+file 'file:C:/Users/wenmi/OneDrive/Documents/GitHub/2025_ISU/media/videos/main/2160p15/partial_movie_files/MandelbrotImageExample/1642092552_3207262396_210259938.mp4'
+file 'file:C:/Users/wenmi/OneDrive/Documents/GitHub/2025_ISU/media/videos/main/2160p15/partial_movie_files/MandelbrotImageExample/1642092552_791260427_691969773.mp4'
+file 'file:C:/Users/wenmi/OneDrive/Documents/GitHub/2025_ISU/media/videos/main/2160p15/partial_movie_files/MandelbrotImageExample/1642092552_4182932861_1629638328.mp4'

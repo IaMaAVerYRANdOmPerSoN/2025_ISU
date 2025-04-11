@@ -23,6 +23,6 @@ iterations before divergence, assigning a color to each point based on
 iterations to divergence, and coloring them black if they never diverge.
 
 7
-00:00:27,440 --> 00:00:31,252
+00:00:27,496 --> 00:00:31,308
 Here is an example of a modern Mandelbrot set image.
 

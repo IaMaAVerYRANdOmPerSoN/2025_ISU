@@ -1,0 +1,8 @@
+1
+00:00:04,333 --> 00:00:06,852
+Let's visualize the orbit of a single
+
+2
+00:00:06,952 --> 00:00:09,825
+point under the iteration of our function.
+

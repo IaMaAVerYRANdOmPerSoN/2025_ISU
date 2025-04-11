@@ -1,0 +1,12 @@
+1
+00:00:00,000 --> 00:00:02,324
+Zooming into the Mandelbrot Set
+
+2
+00:00:02,000 --> 00:00:05,531
+The Mandelbrot Set is infinitely complex. Let's
+
+3
+00:00:05,631 --> 00:00:08,932
+explore its intricate details by zooming in.
+

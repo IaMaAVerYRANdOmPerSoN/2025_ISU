@@ -1,0 +1,28 @@
+1
+00:00:02,000 --> 00:00:05,923
+Here is the visualization of multiple points iterating
+
+2
+00:00:06,023 --> 00:00:09,724
+under our dynamic system, with thier orbits traced.
+
+3
+00:00:09,800 --> 00:00:12,844
+Some points fall into stable cycles;
+
+4
+00:00:16,000 --> 00:00:19,116
+Other points aproach a attracting limit point;
+
+5
+00:00:22,266 --> 00:00:25,766
+Some points are attracted to a repelling limit point;
+
+6
+00:00:28,866 --> 00:00:31,838
+And some points just shoot of to infinity;
+
+7
+00:00:35,000 --> 00:00:40,252
+Or at some points, like the origin, the function is it's own inverse!
+

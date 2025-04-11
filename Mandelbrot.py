@@ -62,6 +62,71 @@ plt.xlabel("Re(c)")
 plt.ylabel("Im(c)")
 plt.show()"""
 
+def mandelbrot_from_center(centerpoint, zoom, width, height, maxiter):
+    """
+    Generate the Mandelbrot set with a given centerpoint and zoom level.
+
+    Parameters:
+        centerpoint: Complex number representing the center of the viewing field.
+        zoom: Float representing the zoom level (higher values zoom in).
+        width: Integer, width of the output image.
+        height: Integer, height of the output image.
+        maxiter: Integer, maximum number of iterations.
+
+    Returns:
+        A 2D array representing the Mandelbrot set.
+    """
+    # Ensure height is even for symmetry
+    if height % 2 != 0:
+        height += 1
+
+    # Calculate the viewing field based on the centerpoint and zoom
+    aspect_ratio = width / height
+    view_height = 4 / zoom  # Default height of the viewing field is 4, scaled by zoom
+    view_width = view_height * aspect_ratio
+
+    rmin = centerpoint.real - view_width / 2
+    rmax = centerpoint.real + view_width / 2
+    cmin = centerpoint.imag
+    cmax = centerpoint.imag + view_height / 2
+
+    # Generate the grid of complex numbers
+    real = np.linspace(rmin, rmax, width, dtype=np.float32)
+    imag = np.linspace(cmin, cmax, height // 2, dtype=np.float32)
+    c_real, c_imag = np.meshgrid(real, imag)
+
+    # Initialize arrays for the Mandelbrot computation
+    output = np.zeros((height // 2, width), dtype=np.uint16)
+    z_real = np.zeros_like(c_real)
+    z_imag = np.zeros_like(c_imag)
+    mask = np.ones_like(c_real, dtype=bool)
+
+    # Bulb checking for optimization
+    p = np.sqrt((c_real - 0.25) ** 2 + c_imag ** 2)
+    cardioid = c_real < p - 2 * p ** 2 + 0.25
+    period2_bulb = (c_real + 1) ** 2 + c_imag ** 2 < 0.0625
+    mask[cardioid | period2_bulb] = False
+    output[~mask] = maxiter - 1
+
+    # Mandelbrot iteration
+    for i in range(maxiter):
+        zr2 = z_real[mask] ** 2
+        zi2 = z_imag[mask] ** 2
+
+        z_imag_new = 2 * z_real[mask] * z_imag[mask] + c_imag[mask]
+        z_real[mask] = zr2 - zi2 + c_real[mask]
+        z_imag[mask] = z_imag_new
+
+        diverged = zr2 + zi2 >= 4.0
+        output[mask] = i
+        mask[mask] = ~diverged
+
+    output[output == maxiter - 1] = 0
+
+    # Mirror the top half to the bottom half
+    full_output = np.vstack([output, np.flipud(output)])
+    return full_output
+
 def multibrot(rmin, rmax, cmax, width, height, maxiter, exponent):
     # Ensure height is even for symmetry
     if height % 2 != 0:

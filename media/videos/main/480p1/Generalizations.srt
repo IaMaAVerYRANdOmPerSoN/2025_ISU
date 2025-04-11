@@ -1,0 +1,52 @@
+1
+00:00:00,000 --> 00:00:02,499
+In this scene, we will explore some
+
+2
+00:00:02,599 --> 00:00:06,212
+fascinating generalizations of the Mandelbrot Set.
+
+3
+00:00:06,000 --> 00:00:09,020
+These include the Multibrot Sets, the
+
+4
+00:00:09,120 --> 00:00:11,972
+Tricorn, and the 4D Mandelbrot Set.
+
+5
+00:00:18,000 --> 00:00:20,996
+First, let's look at the Multibrot Sets.
+
+6
+00:00:22,000 --> 00:00:25,172
+The Multibrot Sets are a generalization of the
+
+7
+00:00:25,272 --> 00:00:28,800
+Mandelbrot Set, where the exponent in the iteration
+
+8
+00:00:28,900 --> 00:00:31,860
+formula is replaced with a diffrent degree.
+
+9
+00:00:31,000 --> 00:00:35,052
+Observe how the fractal changes as we vary the exponent.
+
+10
+00:01:07,000 --> 00:01:10,140
+Next, we explore the Tricorn sets.
+
+11
+00:01:11,000 --> 00:01:17,337
+The Tricorn is generated using the iteration formula where the complex conjugate of
+
+12
+00:01:17,437 --> 00:01:21,604
+z is squared and added to c, instead of just z squared.
+
+13
+00:01:21,000 --> 00:01:25,652
+Let's observe the changes as we vary the exponent here as well.
+
