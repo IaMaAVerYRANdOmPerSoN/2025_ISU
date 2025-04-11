@@ -2679,5 +2679,83 @@
       "name": "en-us-Chirp3-HD-Puck"
     },
     "final_audio": "the-mandelbrot-set-is-infinitely-complex-let-s-eab7bf96.mp3"
+  },
+  {
+    "input_text": "Code Reveal",
+    "input_data": {
+      "input_text": "Code Reveal",
+      "service": "gtts"
+    },
+    "original_audio": "code-reveal-d9d25db0.mp3",
+    "voice": {
+      "language_code": "en-US",
+      "name": "en-us-Chirp3-HD-Puck"
+    },
+    "final_audio": "code-reveal-d9d25db0.mp3"
+  },
+  {
+    "input_text": "Here is the code used to generate the Mandelbrot Set and Julia Sets.",
+    "input_data": {
+      "input_text": "Here is the code used to generate the Mandelbrot Set and Julia Sets.",
+      "service": "gtts"
+    },
+    "original_audio": "here-is-the-code-used-to-generate-the-mandelbrot-ff34b0e2.mp3",
+    "voice": {
+      "language_code": "en-US",
+      "name": "en-us-Chirp3-HD-Puck"
+    },
+    "final_audio": "here-is-the-code-used-to-generate-the-mandelbrot-ff34b0e2.mp3"
+  },
+  {
+    "input_text": "Code Reveal",
+    "input_data": {
+      "input_text": "Code Reveal",
+      "service": "gtts"
+    },
+    "original_audio": "code-reveal-d9d25db0.mp3",
+    "voice": {
+      "language_code": "en-US",
+      "name": "en-us-Chirp3-HD-Puck"
+    },
+    "final_audio": "code-reveal-d9d25db0.mp3"
+  },
+  {
+    "input_text": "Here is the code used to generate the Mandelbrot Set and Julia Sets.",
+    "input_data": {
+      "input_text": "Here is the code used to generate the Mandelbrot Set and Julia Sets.",
+      "service": "gtts"
+    },
+    "original_audio": "here-is-the-code-used-to-generate-the-mandelbrot-ff34b0e2.mp3",
+    "voice": {
+      "language_code": "en-US",
+      "name": "en-us-Chirp3-HD-Puck"
+    },
+    "final_audio": "here-is-the-code-used-to-generate-the-mandelbrot-ff34b0e2.mp3"
+  },
+  {
+    "input_text": "Code Reveal",
+    "input_data": {
+      "input_text": "Code Reveal",
+      "service": "gtts"
+    },
+    "original_audio": "code-reveal-d9d25db0.mp3",
+    "voice": {
+      "language_code": "en-US",
+      "name": "en-us-Chirp3-HD-Puck"
+    },
+    "final_audio": "code-reveal-d9d25db0.mp3"
+  },
+  {
+    "input_text": "Here is the code used to generate the Mandelbrot Set and Julia Sets.",
+    "input_data": {
+      "input_text": "Here is the code used to generate the Mandelbrot Set and Julia Sets.",
+      "service": "gtts"
+    },
+    "original_audio": "here-is-the-code-used-to-generate-the-mandelbrot-ff34b0e2.mp3",
+    "voice": {
+      "language_code": "en-US",
+      "name": "en-us-Chirp3-HD-Puck"
+    },
+    "final_audio": "here-is-the-code-used-to-generate-the-mandelbrot-ff34b0e2.mp3"
   }
 ]
