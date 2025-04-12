@@ -288,7 +288,8 @@ def project_histogram_4d_to_2d(histogram, projection_plane, width, height):
 
     Parameters:
         histogram: 4D histogram to project.
-        projection_plane: Plane to project onto ("zr_zi", "zr_cr", "zr_ci", "zi_cr", "zi_ci", "cr_ci").
+        projection_plane: Plane to project onto 
+        ("zr_zi", "zr_cr", "zr_ci", "zi_cr", "zi_ci", "cr_ci").
         width:  Resolution of the output image.
         height: Resolution of the output image.
 
@@ -328,7 +329,8 @@ def project_histogram_4d_to_2d(histogram, projection_plane, width, height):
                         x = cr_idx
                         y = ci_idx
                     else:
-                        raise ValueError("Invalid projection_plane. Choose from 'zr_zi', 'zr_cr', 'zr_ci', 'zi_cr', 'zi_ci', or 'cr_ci'.")
+                        raise ValueError("Invalid projection_plane. Choose from" \
+                        " 'zr_zi', 'zr_cr', 'zr_ci', 'zi_cr', 'zi_ci', or 'cr_ci'.")
 
                     # Accumulate the count into the 2D projection
                     if 0 <= x < width and 0 <= y < height:
@@ -340,3 +342,7 @@ def project_histogram_4d_to_2d(histogram, projection_plane, width, height):
         projection = projection / total_count
 
     return projection
+
+# Noway the code reveal was longer than the actaul video lol
+# it might be a crapy video, but it was a fun project to make, and I learned a lot about the mandelbrot set and how to use manim
+# and how to make a video with it, so I am happy with it.

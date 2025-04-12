@@ -1,3 +1,4 @@
+# type: ignore
 from Mandelbrot import *
 
 import numpy as np
@@ -30,7 +31,8 @@ class TextScene(VoiceoverScene):
             font_size=36,
             line_spacing=1.5
         ).next_to(title, DOWN, buff=0.5)
-        with self.voiceover(text="The Mandelbrot Set is a set of complex numbers c for which the function z equals z squared plus c does not diverge when iterated from z equals zero."):
+        with self.voiceover(text="The Mandelbrot Set is a set of complex numbers c " \
+        "for which the function z equals z squared plus c does not diverge when iterated from z equals zero."):
             self.play(Write(description), run_time=4)
         self.wait(5)
 
@@ -109,12 +111,15 @@ class MandelbrotImageExample(VoiceoverScene):
 
         # Display the descriptions and images
 
-        with self.voiceover(text="In older images, members of the Mandelbrot set are colored black, and those not in the set are colored white, which looks like this."):
+        with self.voiceover(text="In older images, members of the Mandelbrot set are colored " \
+        "black, and those not in the set are colored white, which looks like this."):
             pass
 
         self.play(FadeIn(mandelbrot_mobject_mono), FadeOut(title), run_time=2)
 
-        with self.voiceover(text="Modern images use a color map to show the number of iterations before divergence, assigning a color to each point based on iterations to divergence, and coloring them black if they never diverge."):
+        with self.voiceover(text="Modern images use a color map to show the number of iterations" \
+        " before divergence, assigning a color to each point based on iterations to divergence,"
+        " and coloring them black if they never diverge."):
             self.play(FadeOut(mandelbrot_mobject_mono), run_time=3)
 
 
@@ -146,11 +151,13 @@ class OnePointExample(VoiceoverScene):
             radius=0.05,
             color=WHITE,
         )
-        dot.add_updater(lambda x: x.move_to(np.array([point.get_value().real, point.get_value().imag, 0])))
+        dot.add_updater(lambda x: x.move_to(np.array([point.get_value().real,
+                                                       point.get_value().imag, 0])))
         self.play(FadeIn(dot), run_time=0.3)
 
         # Add voiceover for the explanation
-        with self.voiceover(text="Let's visualize the orbit of a single point under the iteration of our function."):
+        with self.voiceover(text="Let's visualize the orbit of a single point under" \
+        " the iteration of our function."):
             self.wait(2)
 
         # Iterate through the orbit points
@@ -212,7 +219,8 @@ class MandelbrotScene(VoiceoverScene):
         mandelbrot_mobject = ImageMobject(colored_image, scale_to_resolution=2160)
 
         # Display Mandelbrot set
-        with self.voiceover(text="Lets see how the orbits of a couple points appear on the full set."):
+        with self.voiceover(text="Lets see how the orbits of a couple points appear " \
+        "on the full set."):
             self.add(mandelbrot_mobject)
             self.wait(5)
 
@@ -243,7 +251,10 @@ class MandelbrotScene(VoiceoverScene):
 
         # Update the formula text
         text.add_updater(lambda x: x.become(
-            MathTex(f"f_{{{c.get_value().real:.2f} {'+' if c.get_value().imag >= 0 else '-'} {abs(c.get_value().imag):.2f}i}}(z) = z^2 {'+' if c.get_value().real >= 0 else '-'} {c.get_value().real:.2f} {'+' if c.get_value().imag >= 0 else '-'} {abs(c.get_value().imag):.2f}").to_corner(UL)
+            MathTex(f"f_{{{c.get_value().real:.2f} {'+' if c.get_value().imag >= 0 else '-'}" \
+                     f"{abs(c.get_value().imag):.2f}i}}(z) = z^2 {'+' if c.get_value().real >= 0 else '-'}" \
+                     f"{c.get_value().real:.2f} {'+' if c.get_value().imag >= 0 else '-'}" \
+                     f" {abs(c.get_value().imag):.2f}").to_corner(UL)
         ))
 
         self.add(dots, lines, text)
@@ -277,7 +288,8 @@ class MultiplePointsExample(VoiceoverScene):
         text = MathTex(r"f_c(z) = z^2 + c")
         c = ComplexValueTracker(0 + 0j)
         
-        Dots.add_updater(lambda x: x.become(VGroup(*[Dot(np.array([i[0], i[1], 0]), radius=0.02) for i in mandelbrot_point_cloud(c.get_value(), 25)])))
+        Dots.add_updater(lambda x: x.become(VGroup(*[Dot(np.array([i[0], i[1], 0]),
+                                                          radius=0.02) for i in mandelbrot_point_cloud(c.get_value(), 25)])))
         lines.add_updater(lambda x: x.become(
             VGroup(*[
                 Line(
@@ -290,7 +302,9 @@ class MultiplePointsExample(VoiceoverScene):
                                  mandelbrot_point_cloud(c.get_value(), 25)[1:])
             ])
         ))
-        text.add_updater(lambda x: x.become(MathTex(f"f_{{{c.get_value():.2f}}}(z) = z^2 {'+' if c.get_value().real >= 0 else '-'} {abs(c.get_value()).real:.2f} {'+' if c.get_value().imag >= 0 else '-'} {abs(c.get_value().imag):.2f}i").to_corner(UL)))
+        text.add_updater(lambda x: x.become(MathTex(f"f_{{{c.get_value():.2f}}}(z) = z^2 {'+' if c.get_value().real >= 0 else '-'}" \
+                                                    f"{abs(c.get_value()).real:.2f} {'+' if c.get_value().imag >= 0 else '-'}" \
+                                                    f"{abs(c.get_value().imag):.2f}i").to_corner(UL)))
 
         self.add(Dots, lines)
         with self.voiceover(text="Here is the visualization of multiple points iterating under our dynamic system, with thier orbits traced."):
@@ -330,7 +344,8 @@ class JuliaSetScene(VoiceoverScene):
             "different initial values of $z$.",
             font_size=36,
         ).next_to(title, DOWN, buff=0.5)
-        with self.voiceover(text="Julia Sets are fractals generated by iterating the function z equals z squared plus c for a fixed complex number c, starting from different initial values of z."):
+        with self.voiceover(text="Julia Sets are fractals generated by iterating the function z" \
+        " equals z squared plus c for a fixed complex number c, starting from different initial values of z."):
             self.play(Write(description), run_time=4)
         self.wait(5)
 
@@ -343,7 +358,9 @@ class JuliaSetScene(VoiceoverScene):
             font_size=36,
             color=BLUE
         ).next_to(description, DOWN, buff=0.5)
-        with self.voiceover(text="The Mandelbrot Set acts as a map for Julia Sets. Each point in the Mandelbrot Set corresponds to a unique Julia Set. Points inside the Mandelbrot Set produce connected Julia Sets, while points outside produce infinitely disconnected, dust-like Julia Sets."):
+        with self.voiceover(text="The Mandelbrot Set acts as a map for Julia Sets. Each point in the" \
+        " Mandelbrot Set corresponds to a unique Julia Set. Points inside the Mandelbrot Set produce connected Julia Sets," \
+        " while points outside produce infinitely disconnected, dust-like Julia Sets."):
             self.play(Write(relationship), run_time=6)
         self.wait(3)
 
@@ -436,11 +453,13 @@ class AlternateDefintionWithJulia(VoiceoverScene):
         self.add_updater(lambda _: update_julia_images())
 
         # Display the combined image
-        with self.voiceover(text="Here, we see a grid of Julia Sets, each corresponding to a different point in the complex plane."):
+        with self.voiceover(text="Here, we see a grid of Julia Sets," \
+        " each corresponding to a different point in the complex plane."):
             pass
         with self.voiceover(text="Observe how the Image changes as we increase the resolution of the grid."):
             self.play(julia_wdith.animate.set_value(5), julia_wdith.animate.set_value(5), run_time=30, rate_func=double_smooth)
-        with self.voiceover(text="Now, if we zoom in on only the center pixel of the grid, we can see how the mandelbrot set acts as a map for the Julia Sets."):
+        with self.voiceover(text="Now, if we zoom in on only the center pixel of the grid," \
+        " we can see how the mandelbrot set acts as a map for the Julia Sets."):
             self.play(julia_wdith.animate.set_value(1), julia_wdith.animate.set_value(1), run_time=30, rate_func=double_smooth)
 
         with self.voiceover(text="for a point p, if the julia set of z^2 + p is connected, then p is in the mandelbrot set."):
@@ -458,9 +477,12 @@ class Generalizations(VoiceoverScene):
 
         contents = Tex(
             r"\begin{enumerate}"
-            r"\item \textbf{Multibrot Sets:} A generalization of the Mandelbrot set where the exponent in the iteration formula $z = z^d + c$ is replaced with a higher degree $d$."
-            r"\item \textbf{Tricorn:} A fractal similar to the Mandelbrot set, but generated using the iteration formula $z = \overline{z}^2 + c$, where $\overline{z}$ is the complex conjugate of $z$."
-            r"\item \textbf{4D Mandelbrot:} A higher-dimensional generalization of the Mandelbrot set, visualized by projecting 4D fractals into 3D or 2D spaces."
+            r"\item \textbf{Multibrot Sets:} A generalization of the Mandelbrot set where the exponent" \
+            r" in the iteration formula $z = z^d + c$ is replaced with a higher degree $d$."
+            r"\item \textbf{Tricorn:} A fractal similar to the Mandelbrot set, but generated using" \
+            r" the iteration formula $z = \overline{z}^2 + c$, where $\overline{z}$ is the complex conjugate of $z$."
+            r"\item \textbf{4D Mandelbrot:} A higher-dimensional generalization of the Mandelbrot set," \
+            r" visualized by projecting 4D fractals into 3D or 2D spaces."
             r"\end{enumerate}",
             font_size=36
         ).next_to(Title, DOWN, buff=0.5)
@@ -476,7 +498,8 @@ class Generalizations(VoiceoverScene):
         colormap = cm.get_cmap("inferno")
         exp = ValueTracker(0)
         exp_indicator = MathTex("d =", "0.00", substrings_to_isolate='d').set_color_by_tex('d', RED).to_corner(UL)
-        exp_indicator.add_updater(lambda x: x[1].become(MathTex(f"d = {exp.get_value()}", color = BLUE).set_color_by_tex('d', RED).to_corner(UL)))
+        exp_indicator.add_updater(lambda x: x[1].become(MathTex(f"d = {exp.get_value()}",
+                                                                 color = BLUE).set_color_by_tex('d', RED).to_corner(UL)))
         
         # Create a blank image with dimensions 3840x2160
         from PIL import Image
@@ -516,19 +539,22 @@ class Generalizations(VoiceoverScene):
                                 'zi_ci',
                                 'cr_ci']
         
-        buhdabrot_R = project_histogram_4d_to_2d(histogram = buhdabrot(rmin, rmax, cmax, width, height, maxiter = 100, sample_size = int(5e8)),
+        buhdabrot_R = project_histogram_4d_to_2d(histogram = buhdabrot(rmin, rmax, cmax, width, height,
+          maxiter = 100, sample_size = int(5e8)),
         projection_plane= "zi_ci",
         width = 3840,
         height = 2160,
         )
 
-        buhdabrot_G = project_histogram_4d_to_2d(histogram = buhdabrot(rmin, rmax, cmax, width, height, maxiter = 500, sample_size = int(5e8)),
+        buhdabrot_G = project_histogram_4d_to_2d(histogram = buhdabrot(rmin, rmax, cmax, width, height,
+          maxiter = 500, sample_size = int(5e8)),
         projection_plane= "zi_ci",
         width = 3840,
         height = 2160,
         )
 
-        buhdabrot_B = project_histogram_4d_to_2d(histogram = buhdabrot(rmin, rmax, cmax, width, height, maxiter = 1000, sample_size = int(5e8)),
+        buhdabrot_B = project_histogram_4d_to_2d(histogram = buhdabrot(rmin, rmax, cmax, width, height,
+          maxiter = 1000, sample_size = int(5e8)),
         projection_plane= "zi_ci",
         width = 3840,
         height = 2160,
@@ -556,7 +582,8 @@ class Generalizations(VoiceoverScene):
         with self.voiceover(text="First, let's look at the Multibrot Sets."):
             self.play(Write(Multibrot_title))
         self.wait()
-        with self.voiceover(text="The Multibrot Sets are a generalization of the Mandelbrot Set, where the exponent in the iteration formula is replaced with a diffrent degree."):
+        with self.voiceover(text="The Multibrot Sets are a generalization of the Mandelbrot Set, where the exponent"
+        " in the iteration formula is replaced with a diffrent degree."):
             self.play(Write(exp_indicator), FadeOut(Multibrot_title))
         with self.voiceover(text="Observe how the fractal changes as we vary the exponent."):
             self.play(exp.animate.set_value(6), run_time=15, rate_func=double_smooth)
@@ -569,7 +596,8 @@ class Generalizations(VoiceoverScene):
             self.add(tricorn)
             self.play(Write(Tricorn_title))
         self.wait()
-        with self.voiceover(text="The Tricorn is generated using the iteration formula where the complex conjugate of z is squared and added to c, instead of just z squared."):
+        with self.voiceover(text="The Tricorn is generated using the iteration formula where the complex conjugate" \
+        " of z is squared and added to c, instead of just z squared."):
             self.play(Write(exp_indicator), FadeOut(Tricorn_title))
         tricorn.add_updater(Update_tricorn)
         with self.voiceover(text="Let's observe the changes as we vary the exponent here as well."):
@@ -621,7 +649,8 @@ class ZoomSequence(VoiceoverScene):
         for i in zoom_points:
 
             def Update_zoom(old_mobject):
-                mandelbrot_set = mandelbrot_from_center(centerpoint = i, zoom = zoom_lvl.get_value(), width=3840, height = 2160, maxiter= int(zoom_lvl.get_value()) * 30)
+                mandelbrot_set = mandelbrot_from_center(centerpoint = i, zoom = zoom_lvl.get_value(),
+                                                         width=3840, height = 2160, maxiter= int(zoom_lvl.get_value()) * 30)
                 normalized_set = np.log(1 + mandelbrot_set) / np.log(3) / np.log(256)
                 colored_image = (colormap(normalized_set)[:, :, :3] * 255).astype(np.uint8)
                 mandelbrot_mobject = ImageMobject(colored_image, scale_to_resolution=2160)
@@ -635,3 +664,29 @@ class ZoomSequence(VoiceoverScene):
             self.wait()
 
             mandelbrot_image.remove_updater(Update_zoom)
+
+class outro(VoiceoverScene):
+    def construct(self):
+        # Set up speech service
+        self.set_speech_service(GTTSService(lang="en", tld="com"))
+
+        # Title
+        title = Text("Thank you for watching!", font_size=48).to_edge(UP)
+        with self.voiceover(text="Thank you for watching!"):
+            self.play(Write(title), run_time=2)
+
+        # Description
+        description = Text(
+            "We hope you enjoyed this exploration of the Mandelbrot Set.\n"
+            "If you have any questions or comments, feel free to reach out.\n"
+            "email: wenmike.xie@gmail.com\n"
+            "phone: +1 (647) 981-4889\n",
+            font_size=36,
+            line_spacing=1.5
+        ).next_to(title, DOWN, buff=0.5)
+        with self.voiceover(text="I hope you enjoyed this exploration of the Mandelbrot Set." \
+        " If you have any questions or comments, feel free to reach out."):
+            self.play(Write(description), run_time=4)
+        self.wait(5)
+
+        self.play(Unwrite(title), Unwrite(description))
