@@ -3,26 +3,26 @@
 What is the Mandelbrot Set?
 
 2
-00:00:02,133 --> 00:00:05,797
+00:00:02,136 --> 00:00:05,799
 The Mandelbrot Set is a set of complex numbers c
 
 3
-00:00:05,897 --> 00:00:09,560
+00:00:05,899 --> 00:00:09,563
 for which the function z equals z squared plus c
 
 4
-00:00:09,660 --> 00:00:13,481
+00:00:09,663 --> 00:00:13,484
 does not diverge when iterated from z equals zero.
 
 5
-00:00:18,533 --> 00:00:22,009
+00:00:18,536 --> 00:00:22,012
 Now, let's look at some example iterations.
 
 6
-00:00:24,066 --> 00:00:28,502
+00:00:24,112 --> 00:00:28,548
 Here are the first few iterations for a specific complex number.
 
 7
-00:00:47,600 --> 00:00:52,420
+00:00:47,645 --> 00:00:52,465
 If the sequence remains bounded, c is in the Mandelbrot Set.
 

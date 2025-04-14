@@ -24,12 +24,11 @@ class TextScene(VoiceoverScene):
             self.play(Write(title), run_time=2)
 
         # Description
-        description = Text(
+        description = Tex(
             "The Mandelbrot Set is a set of complex numbers c\n"
-            "for which the function z = z^2 + c does not diverge\n"
-            "when iterated from z = 0.",
+            "for which the function $z = z^2 + c$ does not diverge\n"
+            "when iterated from $z = 0$.",
             font_size=36,
-            line_spacing=1.5
         ).next_to(title, DOWN, buff=0.5)
         with self.voiceover(text="The Mandelbrot Set is a set of complex numbers c " \
         "for which the function z equals z squared plus c does not diverge when iterated from z equals zero."):
@@ -79,7 +78,7 @@ class TextScene(VoiceoverScene):
 
         self.wait(2)
         with self.voiceover(text="If the sequence remains bounded, c is in the Mandelbrot Set."):
-            self.play(FadeOut(example_text_mobjects), FadeOut(example_title))
+            self.play(Unwrite(example_title))
         self.wait(2)
 
 
@@ -253,7 +252,7 @@ class MandelbrotScene(VoiceoverScene):
         text.add_updater(lambda x: x.become(
             MathTex(f"f_{{{c.get_value().real:.2f} {'+' if c.get_value().imag >= 0 else '-'}" \
                      f"{abs(c.get_value().imag):.2f}i}}(z) = z^2 {'+' if c.get_value().real >= 0 else '-'}" \
-                     f"{c.get_value().real:.2f} {'+' if c.get_value().imag >= 0 else '-'}" \
+                     f"{abs(c.get_value().real):.2f} {'+' if c.get_value().imag >= 0 else '-'}" \
                      f" {abs(c.get_value().imag):.2f}").to_corner(UL)
         ))
 
@@ -676,11 +675,11 @@ class outro(VoiceoverScene):
             self.play(Write(title), run_time=2)
 
         # Description
-        description = Text(
-            "We hope you enjoyed this exploration of the Mandelbrot Set.\n"
+        description = MarkupText(
+            "I hope you enjoyed this exploration of the Mandelbrot Set.\n"
             "If you have any questions or comments, feel free to reach out.\n"
-            "email: wenmike.xie@gmail.com\n"
-            "phone: +1 (647) 981-4889\n",
+            "email: <i><span fgcolor = 'cyan'>wenmike.xie@gmail.com</span></i>\n"
+            "phone: <span fgcolor = 'red'>+1 (647) 981-4889</span>\n",
             font_size=36,
             line_spacing=1.5
         ).next_to(title, DOWN, buff=0.5)

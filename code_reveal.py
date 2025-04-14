@@ -3,6 +3,8 @@ from manim import *
 from manim_voiceover import VoiceoverScene
 from manim_voiceover.services.gtts import GTTSService
 
+config.max_files_cached = 500
+
 class code_reveal(VoiceoverScene):
     def construct(self):
         # Set up speech service
@@ -42,8 +44,11 @@ class code_reveal(VoiceoverScene):
                 background_config={"stroke_color": WHITE}
             ).scale(0.25)
 
-            self.add(code_mobject)
+            file_name = Text("Main.py", font_size=36).to_edge(UP, buff=0.5).shift(LEFT*3.5)
+            self.play(Write(file_name), run_time=2)
+            self.play(Unwrite(file_name), run_time=2)
 
+            self.add(code_mobject)
 
             for ind, i in enumerate(chunks):
                 self.play(code_mobject.animate.become(
@@ -79,6 +84,10 @@ class code_reveal(VoiceoverScene):
                 background_config={"stroke_color": WHITE}
             ).move_to(ORIGIN).scale_to_fit_height(ScreenRectangle().height + 1).scale_to_fit_width(
                  ScreenRectangle().width + 1)
+            
+            file_name = Text("Mandelbrot.py", font_size=36).to_edge(UP, buff=0.5).shift(LEFT*3.5)
+            self.play(Write(file_name), run_time=2)
+            self.play(Unwrite(file_name), run_time=2)
 
             self.add(code_mobject_2)
 
@@ -101,7 +110,7 @@ class code_reveal(VoiceoverScene):
             self.play(Unwrite(code_mobject_2), run_time=2)
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> part 3 >>>>>>>>>>>
-        self.play(Write(bragging := Text("Just the code reveal program itself is 186 lines",
+        self.play(Write(bragging := Text("Just the code reveal program itself is 190 lines",
                                           font_size = 36).to_edge(UP, buff = 0.5)), run_time=2)
         self.play(Unwrite(bragging), run_time=2)
 
@@ -123,7 +132,6 @@ class code_reveal(VoiceoverScene):
                  ScreenRectangle().width + 1)
 
             self.add(code_mobject_3)
-
 
             for ind, i in enumerate(chunks):
                 self.play(code_mobject_3.animate.become(

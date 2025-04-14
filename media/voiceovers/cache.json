@@ -3456,5 +3456,288 @@
       "name": "en-us-Chirp3-HD-Puck"
     },
     "final_audio": "here-is-the-code-used-to-generate-the-mandelbrot-ff34b0e2.mp3"
+  },
+  {
+    "input_text": "Thank you for watching!",
+    "input_data": {
+      "input_text": "Thank you for watching!",
+      "service": "gtts"
+    },
+    "original_audio": "thank-you-for-watching-0d321238.mp3",
+    "voice": {
+      "language_code": "en-US",
+      "name": "en-us-Chirp3-HD-Puck"
+    },
+    "final_audio": "thank-you-for-watching-0d321238.mp3"
+  },
+  {
+    "input_text": "I hope you enjoyed this exploration of the Mandelbrot Set. If you have any questions or comments, feel free to reach out.",
+    "input_data": {
+      "input_text": "I hope you enjoyed this exploration of the Mandelbrot Set. If you have any questions or comments, feel free to reach out.",
+      "service": "gtts"
+    },
+    "original_audio": "i-hope-you-enjoyed-this-exploration-of-the-2676fe94.mp3",
+    "voice": {
+      "language_code": "en-US",
+      "name": "en-us-Chirp3-HD-Puck"
+    },
+    "final_audio": "i-hope-you-enjoyed-this-exploration-of-the-2676fe94.mp3"
+  },
+  {
+    "input_text": "Thank you for watching!",
+    "input_data": {
+      "input_text": "Thank you for watching!",
+      "service": "gtts"
+    },
+    "original_audio": "thank-you-for-watching-0d321238.mp3",
+    "voice": {
+      "language_code": "en-US",
+      "name": "en-us-Chirp3-HD-Puck"
+    },
+    "final_audio": "thank-you-for-watching-0d321238.mp3"
+  },
+  {
+    "input_text": "Thank you for watching!",
+    "input_data": {
+      "input_text": "Thank you for watching!",
+      "service": "gtts"
+    },
+    "original_audio": "thank-you-for-watching-0d321238.mp3",
+    "voice": {
+      "language_code": "en-US",
+      "name": "en-us-Chirp3-HD-Puck"
+    },
+    "final_audio": "thank-you-for-watching-0d321238.mp3"
+  },
+  {
+    "input_text": "Thank you for watching!",
+    "input_data": {
+      "input_text": "Thank you for watching!",
+      "service": "gtts"
+    },
+    "original_audio": "thank-you-for-watching-0d321238.mp3",
+    "voice": {
+      "language_code": "en-US",
+      "name": "en-us-Chirp3-HD-Puck"
+    },
+    "final_audio": "thank-you-for-watching-0d321238.mp3"
+  },
+  {
+    "input_text": "I hope you enjoyed this exploration of the Mandelbrot Set. If you have any questions or comments, feel free to reach out.",
+    "input_data": {
+      "input_text": "I hope you enjoyed this exploration of the Mandelbrot Set. If you have any questions or comments, feel free to reach out.",
+      "service": "gtts"
+    },
+    "original_audio": "i-hope-you-enjoyed-this-exploration-of-the-2676fe94.mp3",
+    "voice": {
+      "language_code": "en-US",
+      "name": "en-us-Chirp3-HD-Puck"
+    },
+    "final_audio": "i-hope-you-enjoyed-this-exploration-of-the-2676fe94.mp3"
+  },
+  {
+    "input_text": "What is the Mandelbrot Set?",
+    "input_data": {
+      "input_text": "What is the Mandelbrot Set?",
+      "service": "gtts"
+    },
+    "original_audio": "what-is-the-mandelbrot-set-92cee29f.mp3",
+    "final_audio": "what-is-the-mandelbrot-set-92cee29f.mp3"
+  },
+  {
+    "input_text": "The Mandelbrot Set is a set of complex numbers c for which the function z equals z squared plus c does not diverge when iterated from z equals zero.",
+    "input_data": {
+      "input_text": "The Mandelbrot Set is a set of complex numbers c for which the function z equals z squared plus c does not diverge when iterated from z equals zero.",
+      "service": "gtts"
+    },
+    "original_audio": "the-mandelbrot-set-is-a-set-of-complex-numbers-c-cb5ad6f8.mp3",
+    "final_audio": "the-mandelbrot-set-is-a-set-of-complex-numbers-c-cb5ad6f8.mp3"
+  },
+  {
+    "input_text": "Now, let's look at some example iterations.",
+    "input_data": {
+      "input_text": "Now, let's look at some example iterations.",
+      "service": "gtts"
+    },
+    "original_audio": "now-let-s-look-at-some-example-iterations-22fecc93.mp3",
+    "final_audio": "now-let-s-look-at-some-example-iterations-22fecc93.mp3"
+  },
+  {
+    "input_text": "Here are the first few iterations for a specific complex number.",
+    "input_data": {
+      "input_text": "Here are the first few iterations for a specific complex number.",
+      "service": "gtts"
+    },
+    "original_audio": "here-are-the-first-few-iterations-for-a-specific-84a6edcc.mp3",
+    "final_audio": "here-are-the-first-few-iterations-for-a-specific-84a6edcc.mp3"
+  },
+  {
+    "input_text": "If the sequence remains bounded, c is in the Mandelbrot Set.",
+    "input_data": {
+      "input_text": "If the sequence remains bounded, c is in the Mandelbrot Set.",
+      "service": "gtts"
+    },
+    "original_audio": "if-the-sequence-remains-bounded-c-is-in-the-15276ab0.mp3",
+    "final_audio": "if-the-sequence-remains-bounded-c-is-in-the-15276ab0.mp3"
+  },
+  {
+    "input_text": "What is the Mandelbrot Set?",
+    "input_data": {
+      "input_text": "What is the Mandelbrot Set?",
+      "service": "gtts"
+    },
+    "original_audio": "what-is-the-mandelbrot-set-92cee29f.mp3",
+    "final_audio": "what-is-the-mandelbrot-set-92cee29f.mp3"
+  },
+  {
+    "input_text": "What is the Mandelbrot Set?",
+    "input_data": {
+      "input_text": "What is the Mandelbrot Set?",
+      "service": "gtts"
+    },
+    "original_audio": "what-is-the-mandelbrot-set-92cee29f.mp3",
+    "final_audio": "what-is-the-mandelbrot-set-92cee29f.mp3"
+  },
+  {
+    "input_text": "The Mandelbrot Set is a set of complex numbers c for which the function z equals z squared plus c does not diverge when iterated from z equals zero.",
+    "input_data": {
+      "input_text": "The Mandelbrot Set is a set of complex numbers c for which the function z equals z squared plus c does not diverge when iterated from z equals zero.",
+      "service": "gtts"
+    },
+    "original_audio": "the-mandelbrot-set-is-a-set-of-complex-numbers-c-cb5ad6f8.mp3",
+    "final_audio": "the-mandelbrot-set-is-a-set-of-complex-numbers-c-cb5ad6f8.mp3"
+  },
+  {
+    "input_text": "Now, let's look at some example iterations.",
+    "input_data": {
+      "input_text": "Now, let's look at some example iterations.",
+      "service": "gtts"
+    },
+    "original_audio": "now-let-s-look-at-some-example-iterations-22fecc93.mp3",
+    "final_audio": "now-let-s-look-at-some-example-iterations-22fecc93.mp3"
+  },
+  {
+    "input_text": "Here are the first few iterations for a specific complex number.",
+    "input_data": {
+      "input_text": "Here are the first few iterations for a specific complex number.",
+      "service": "gtts"
+    },
+    "original_audio": "here-are-the-first-few-iterations-for-a-specific-84a6edcc.mp3",
+    "final_audio": "here-are-the-first-few-iterations-for-a-specific-84a6edcc.mp3"
+  },
+  {
+    "input_text": "If the sequence remains bounded, c is in the Mandelbrot Set.",
+    "input_data": {
+      "input_text": "If the sequence remains bounded, c is in the Mandelbrot Set.",
+      "service": "gtts"
+    },
+    "original_audio": "if-the-sequence-remains-bounded-c-is-in-the-15276ab0.mp3",
+    "final_audio": "if-the-sequence-remains-bounded-c-is-in-the-15276ab0.mp3"
+  },
+  {
+    "input_text": "Lets see how the orbits of a couple points appear on the full set.",
+    "input_data": {
+      "input_text": "Lets see how the orbits of a couple points appear on the full set.",
+      "service": "gtts"
+    },
+    "original_audio": "lets-see-how-the-orbits-of-a-couple-points-appear-14f5ebfd.mp3",
+    "final_audio": "lets-see-how-the-orbits-of-a-couple-points-appear-14f5ebfd.mp3"
+  },
+  {
+    "input_text": "What are Julia Sets?",
+    "input_data": {
+      "input_text": "What are Julia Sets?",
+      "service": "gtts"
+    },
+    "original_audio": "what-are-julia-sets-1844a3be.mp3",
+    "final_audio": "what-are-julia-sets-1844a3be.mp3"
+  },
+  {
+    "input_text": "Julia Sets are fractals generated by iterating the function z equals z squared plus c for a fixed complex number c, starting from different initial values of z.",
+    "input_data": {
+      "input_text": "Julia Sets are fractals generated by iterating the function z equals z squared plus c for a fixed complex number c, starting from different initial values of z.",
+      "service": "gtts"
+    },
+    "original_audio": "julia-sets-are-fractals-generated-by-iterating-the-ad0dd870.mp3",
+    "final_audio": "julia-sets-are-fractals-generated-by-iterating-the-ad0dd870.mp3"
+  },
+  {
+    "input_text": "What are Julia Sets?",
+    "input_data": {
+      "input_text": "What are Julia Sets?",
+      "service": "gtts"
+    },
+    "original_audio": "what-are-julia-sets-1844a3be.mp3",
+    "final_audio": "what-are-julia-sets-1844a3be.mp3"
+  },
+  {
+    "input_text": "Julia Sets are fractals generated by iterating the function z equals z squared plus c for a fixed complex number c, starting from different initial values of z.",
+    "input_data": {
+      "input_text": "Julia Sets are fractals generated by iterating the function z equals z squared plus c for a fixed complex number c, starting from different initial values of z.",
+      "service": "gtts"
+    },
+    "original_audio": "julia-sets-are-fractals-generated-by-iterating-the-ad0dd870.mp3",
+    "final_audio": "julia-sets-are-fractals-generated-by-iterating-the-ad0dd870.mp3"
+  },
+  {
+    "input_text": "The Mandelbrot Set acts as a map for Julia Sets. Each point in the Mandelbrot Set corresponds to a unique Julia Set. Points inside the Mandelbrot Set produce connected Julia Sets, while points outside produce infinitely disconnected, dust-like Julia Sets.",
+    "input_data": {
+      "input_text": "The Mandelbrot Set acts as a map for Julia Sets. Each point in the Mandelbrot Set corresponds to a unique Julia Set. Points inside the Mandelbrot Set produce connected Julia Sets, while points outside produce infinitely disconnected, dust-like Julia Sets.",
+      "service": "gtts"
+    },
+    "original_audio": "the-mandelbrot-set-acts-as-a-map-for-julia-sets-882af6dd.mp3",
+    "final_audio": "the-mandelbrot-set-acts-as-a-map-for-julia-sets-882af6dd.mp3"
+  },
+  {
+    "input_text": "Code Reveal",
+    "input_data": {
+      "input_text": "Code Reveal",
+      "service": "gtts"
+    },
+    "original_audio": "code-reveal-d9d25db0.mp3",
+    "voice": {
+      "language_code": "en-US",
+      "name": "en-us-Chirp3-HD-Puck"
+    },
+    "final_audio": "code-reveal-d9d25db0.mp3"
+  },
+  {
+    "input_text": "Here is the code used to generate the Mandelbrot Set and Julia Sets.",
+    "input_data": {
+      "input_text": "Here is the code used to generate the Mandelbrot Set and Julia Sets.",
+      "service": "gtts"
+    },
+    "original_audio": "here-is-the-code-used-to-generate-the-mandelbrot-ff34b0e2.mp3",
+    "voice": {
+      "language_code": "en-US",
+      "name": "en-us-Chirp3-HD-Puck"
+    },
+    "final_audio": "here-is-the-code-used-to-generate-the-mandelbrot-ff34b0e2.mp3"
+  },
+  {
+    "input_text": "Code Reveal",
+    "input_data": {
+      "input_text": "Code Reveal",
+      "service": "gtts"
+    },
+    "original_audio": "code-reveal-d9d25db0.mp3",
+    "voice": {
+      "language_code": "en-US",
+      "name": "en-us-Chirp3-HD-Puck"
+    },
+    "final_audio": "code-reveal-d9d25db0.mp3"
+  },
+  {
+    "input_text": "Here is the code used to generate the Mandelbrot Set and Julia Sets.",
+    "input_data": {
+      "input_text": "Here is the code used to generate the Mandelbrot Set and Julia Sets.",
+      "service": "gtts"
+    },
+    "original_audio": "here-is-the-code-used-to-generate-the-mandelbrot-ff34b0e2.mp3",
+    "voice": {
+      "language_code": "en-US",
+      "name": "en-us-Chirp3-HD-Puck"
+    },
+    "final_audio": "here-is-the-code-used-to-generate-the-mandelbrot-ff34b0e2.mp3"
   }
 ]

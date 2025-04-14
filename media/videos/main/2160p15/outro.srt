@@ -1,0 +1,12 @@
+1
+00:00:00,000 --> 00:00:01,484
+Thank you for watching!
+
+2
+00:00:02,000 --> 00:00:06,243
+I hope you enjoyed this exploration of the Mandelbrot Set. If
+
+3
+00:00:06,343 --> 00:00:10,444
+you have any questions or comments, feel free to reach out.
+

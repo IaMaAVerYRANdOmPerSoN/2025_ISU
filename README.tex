@@ -1,0 +1,264 @@
+\documentclass{article}
+\usepackage[a4paper,
+            bindingoffset=0.2in,
+            left=0.25in,
+            right=0.25in,
+            top=0.25in,
+            bottom=0.25in,
+            footskip=0.25in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ 
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  firstnumber=1,                   % start line enumeration with line 1
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Python,                 % the language of the code
+  morekeywords={},                 % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\color{black},       % the style that is used for the line-numbers
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=4,	                   % sets default tabsize to 4 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+\title{My Expirence Animating with Manim}
+\author{Michael Xie \\ Jack Miner Public School \\ Grade 8}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+Manim is a powerful animation engine that allows you to create high-quality animations for mathematical concepts. It is widely used in educational videos and presentations. In this article, I will share my experience using Manim 
+to create animations for my class project. I will discuss the challenges I faced, the solutions I found, and the final product I created.
+
+\section{Getting Started}
+I already had a Manim environment set up on my computer from a previous project, along with a solid understanding of Python. To begin, I researched my topic, holomorphic dynamics, by reading several articles and watching videos, including 3Blue1Brown's excellent explanation on the subject. This gave me a clear idea of what a Manim animation should look like. 
+
+I started coding by using Matplotlib to create a static plot of the holomorphic function I was working with—the Mandelbrot set. After a few rounds of debugging, I successfully wrote a function that generates an ndarray representing the Mandelbrot set, along with several additional utility functions. These included:
+
+\begin{enumerate}
+    \item \texttt{mandelbrot}: Generate a Mandelbrot set image.\\
+    This function computes the Mandelbrot set for a given range of real and imaginary values,
+    and returns a 2D array representing the fractal image. The computation is optimized by
+    skipping points inside the main cardioid and the period-2 bulb.\\
+    \textbf{Parameters:}
+    \begin{itemize}
+        \item \texttt{rmin} (float): The minimum value of the real axis.
+        \item \texttt{rmax} (float): The maximum value of the real axis.
+        \item \texttt{cmax} (complex): The maximum value of the imaginary axis (only the imaginary part is used).
+        \item \texttt{width} (int): The width of the output image in pixels.
+        \item \texttt{height} (int): The height of the output image in pixels. If odd, it will be adjusted to the next even number.
+        \item \texttt{maxiter} (int): The maximum number of iterations to determine divergence.
+    \end{itemize}
+    \textbf{Returns:}
+    \begin{itemize}
+        \item \texttt{numpy.ndarray}: A 2D array of shape (\texttt{height}, \texttt{width}) containing the Mandelbrot set.
+        Each value represents the iteration count at which the point diverged,
+        or 0 if the point is in the set.
+    \end{itemize}
+    \item \texttt{mandelbrot\_point\_cloud}: Generate the orbit for a single point. \\
+    This function computes the orbit of a single point in the Mandelbrot set and returns
+    a NDarray of complex numbers representing the orbit.\\
+    \textbf{Parameters:}
+    \begin{itemize}
+        \item \texttt{c} (complex): The complex number to evaluate in the Mandelbrot set.
+        \item \texttt{maxiter} (int): The maximum number of iterations to perform.
+    \end{itemize}
+    \textbf{Returns:}
+    \begin{itemize}
+        \item \texttt{numpy.ndarray:} A 2D array of shape (maxiter, 2), where each row contains the real and imaginary 
+        parts of the complex number at each iteration.
+    \end{itemize}
+    \item \texttt{mandelbrot\_from\_center}: Generate a Mandelbrot set image centered at a specific point with a zoom level.\\
+    This function computes the Mandelbrot set for a given center point and zoom level, allowing for detailed exploration of the fractal.\\
+    \textbf{Parameters:}
+    \begin{itemize}
+        \item \texttt{centerpoint} (complex): The center of the viewing field.
+        \item \texttt{zoom} (float): The zoom level (higher values zoom in).
+        \item \texttt{width} (int): The width of the output image in pixels.
+        \item \texttt{height} (int): The height of the output image in pixels.
+        \item \texttt{maxiter} (int): The maximum number of iterations to determine divergence.
+    \end{itemize}
+    \textbf{Returns:}
+    \begin{itemize}
+        \item \texttt{numpy.ndarray}: A 2D array of shape (\texttt{height}, \texttt{width}) containing the Mandelbrot set.
+    \end{itemize}
+    \item \texttt{multibrot}: Generate a generalized Mandelbrot set with a custom exponent.\\
+    This function computes the fractal for a given exponent, creating variations of the Mandelbrot set.\\
+    \textbf{Parameters:}
+    \begin{itemize}
+        \item \texttt{rmin}, \texttt{rmax} (float): The range of the real axis.
+        \item \texttt{cmax} (complex): The maximum value of the imaginary axis.
+        \item \texttt{width}, \texttt{height} (int): The dimensions of the output image in pixels.
+        \item \texttt{maxiter} (int): The maximum number of iterations.
+        \item \texttt{exponent} (int): The exponent used in the fractal formula.
+    \end{itemize}
+    \textbf{Returns:}
+    \begin{itemize}
+        \item \texttt{numpy.ndarray}: A 2D array representing the fractal.
+    \end{itemize}
+    \item \texttt{julia}: Generate a Julia set for a given complex parameter.\\
+    This function computes the Julia set, a related fractal to the Mandelbrot set, for a specific complex parameter.\\
+    \textbf{Parameters:}
+    \begin{itemize}
+        \item \texttt{c} (complex): The complex parameter for the Julia set.
+        \item \texttt{width}, \texttt{height} (int): The dimensions of the output image in pixels.
+        \item \texttt{maxiter} (int): The maximum number of iterations.
+    \end{itemize}
+    \textbf{Returns:}
+    \begin{itemize}
+        \item \texttt{numpy.ndarray}: A 2D array representing the Julia set.
+    \end{itemize}
+    \item \texttt{multicorn}: Generate a Multicorn fractal with a custom exponent.\\
+    This function computes the Multicorn fractal, a variation of the Mandelbrot set with conjugation.\\
+    \textbf{Parameters:}
+    \begin{itemize}
+        \item \texttt{rmin}, \texttt{rmax} (float): The range of the real axis.
+        \item \texttt{cmax} (complex): The maximum value of the imaginary axis.
+        \item \texttt{width}, \texttt{height} (int): The dimensions of the output image in pixels.
+        \item \texttt{maxiter} (int): The maximum number of iterations.
+        \item \texttt{exponent} (int): The exponent used in the fractal formula.
+    \end{itemize}
+    \textbf{Returns:}
+    \begin{itemize}
+        \item \texttt{numpy.ndarray}: A 2D array representing the Multicorn fractal.
+    \end{itemize}
+    \item \texttt{buhdabrot}: Generate a Buhdabrot fractal using a 4D histogram.\\
+    This function computes the Buhdabrot fractal by sampling random points and tracking their trajectories in a 4D histogram.\\
+    \textbf{Parameters:}
+    \begin{itemize}
+        \item \texttt{rmin}, \texttt{rmax} (float): The range of the real axis.
+        \item \texttt{cmax} (complex): The maximum value of the imaginary axis.
+        \item \texttt{width}, \texttt{height} (int): The dimensions of the output image in pixels.
+        \item \texttt{maxiter} (int): The maximum number of iterations.
+        \item \texttt{sample\_size} (int): The number of random samples to generate.
+    \end{itemize}
+    \textbf{Returns:}
+    \begin{itemize}
+        \item \texttt{numpy.ndarray}: A 4D histogram representing the Buhdabrot fractal.
+    \end{itemize}
+\end{enumerate}
+
+\section{Creating the Animations}
+Once I completed the functions, I began programming the Manim animations. Rather than following a strict order,
+I worked on the scenes that made the most sense at the time, guided by a general vision of the final product.
+I started by rendering a static Mandelbrot set and tracing the orbit of a point. To achieve this,
+I used \texttt{ComplexValueTracker}s to animate the changing point and equation text,
+while applying the inferno colormap for visualization.
+\textbf{Here is the code for the animations}
+
+\lstinputlisting[language=Python,firstline=202,lastline=276, breaklines]{Main.py}
+
+The next scene I created highlighted the orbit of a single point in the Mandelbrot set on a \texttt{ComplexPlane}. 
+I used a point cloud to visualize the orbit of the point and arrows to indicate transitions between points. 
+Additionally, I utilized a \texttt{ComplexValueTracker} to animate the movement of the point and a \texttt{MathTex} 
+object to dynamically display the equation representing the point.
+\textbf{This is the code for the scene:}
+
+\lstinputlisting[language=Python,firstline=129,lastline=199]{Main.py}
+
+After animating the oribit of a single point, I deciding to animate the orbit of multiple points, once agian
+using \texttt{ComplexValueTracker}s to animate the \texttt{Dot} and the \texttt{MathTex} objects, as well as \texttt{mandelbrot\_point\_cloud} function 
+to generate the orbits. it was also, once agian on the background of a \texttt{ComplexPlane}.
+\textbf{Here is the code for the scene:}
+
+\lstinputlisting[language=Python,firstline=278,lastline=325, breaklines]{Main.py}
+
+The next scene I worked on was a text-based scene that explained the concept of the Mandelbrot set.
+I used a \texttt{MathTex} object to display the equations, and a \texttt{Text} object to display the text.
+\textbf{The code for the scene is as follows:}
+
+\lstinputlisting[language=Python,firstline=16,lastline=82, breaklines]{Main.py}
+
+After that, I Made a scene explaining the concept of Julia sets. The scene uses the \texttt{julia} function
+to generate the Julia set for a specific complex number. I used a \texttt{ComplexValueTracker} to animate
+changing the value of c and the inferno colormap to color the image.
+\textbf{Here is the code for the scene:}
+
+\lstinputlisting[language=Python,firstline=329,lastline=407, breaklines]{Main.py}
+
+Then I tried to make a scene explaining how the Mandelbrot set acts as a map for Julia sets.
+I used the \texttt{julia} function and loops to generate the Julia sets for each point ina grid. this was very difficult.
+Then, I used a updater to animate increasing the reslution of the grid while deacreasing the reslution of each julia set,
+showing how the Mandelbrot set acts as a map for Julia sets. however, I was not able to get this to work properly, as my grid
+logic was incorrect.
+\textbf{Here is the code for the scene:}
+
+\lstinputlisting[language=Python, firstline=409, lastline=465, breaklines]{Main.py}
+
+The hardest scene I made explored some generalizations of the Mandelbrot set, including the Multibrots and Buhdagrams.
+after countless hours of work and many rounds of debugging, I was unfortunately unable to get the scene to work properly.
+I used the \texttt{multibrot} and \texttt{buhdabrot} functions to generate the images, and a \texttt{ValueTracker} to animate the changing exponent.
+I used the inferno colormap to color the multibrot, a false color method the color the buhdagram.
+\textbf{Here is the code for the scene:}
+\lstinputlisting[language=Python, firstline=468, lastline=605, breaklines]{Main.py}
+
+After that, for the next hardest scene, I made a zoom sequnce expoloring the boundry of the Mandelbrot set.
+This scene used the \texttt{mandelbrot\_from\_center} function to generate the images, and a \texttt{ValueTracker} to animate the zoom level.
+I used the inferno colormap to color the images, and a array of 5 points to zoom on. once agian, after wasting countless hours of work and many rounds of debugging,
+I was unable to meet runtime constraints. it would have taken hundreds of hours to render the scene, so I had to scrap it.
+\textbf{Here is the code for the scene:}
+
+\lstinputlisting[language=Python, firstline=607, lastline=665, breaklines]{Main.py}
+
+the final scene I made was a simple outro scene, which used a \texttt{Text} object to display the text.
+\textbf{The code for the scene is as follows:}
+
+\lstinputlisting[language=Python, firstline=667, lastline=691, breaklines]{Main.py}
+
+\section{Code Reveal Program}
+
+although the code and process is shown here, I wanted to create a smooth way to reveal the code in the video.
+I wrote a new python file which breaks the code into 40-line sections, and uses a \texttt{Code} object to display the code.
+I really wanted people to know how much work actaully goes into 5 minutes of (crappy) animation, Which is why I made 
+this program. Unironically the code reveal animation eneded up being longer than the actual animation.
+\textbf{Here is the code for the program:}
+
+\lstinputlisting[language=Python, breaklines]{code_reveal.py}
+
+\section{Challenges and debugging}
+I encountered numerous challenges while working on this project.
+The most difficult aspect was debugging the code and ensuring that the animations rendered properly.
+I spent countless hours trying to figure out why certain sections weren’t functioning as intended, often rewriting large portions of the code multiple times.
+Learning how to use Manim and its features was also a steep learning curve.
+The documentation was oftentimes unclear, so I had to rely heavily on online forums and community support.
+People often underestimate how difficult coding can be and how much time it takes to get things working correctly.
+Imagine if Google Docs took ten minutes to load every time you wanted to edit a document, and if you made a mistake, you’d have to wait another ten minutes just to see if it worked.
+And instead of a user-friendly interface, you had to write everything in a plain text file.
+That’s what coding can feel like: time-consuming, frustrating, and mentally exhausting.
+
+Sometimes it gets so bad that \textit{unironically} 40\% of your video doesn’t even exist because it was bugged—something I experienced firsthand.
+I had to turn to Stack Overflow multiple times, once waiting a week just for a reply.
+Unlike a human, the Python interpreter doesn’t understand your intentions; it only interprets the code you wrote.
+A single typo or subtle logic error can break everything, and the error messages are often vague—or it might even fail silently.
+To make things more challenging, my subject matter involved complex mathematics and abstract thinking, which much added more room for error.
+And as if that weren’t enough, imagine that if your English were grammatically correct but not perfectly clear and concise, Google Docs would take 1,000 times longer to load
+and you’d need to learn even more math just to speed things up.
+That’s what programming felt like throughout this project.
+
+
+\end{document}

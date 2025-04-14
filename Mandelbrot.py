@@ -2,6 +2,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def mandelbrot_point_cloud(c, maxiter):
+    """
+    Generates a point cloud representing the iterations of the Mandelbrot set for a given complex number.
+    Parameters:
+    c (complex): The complex number to evaluate in the Mandelbrot set.
+    maxiter (int): The maximum number of iterations to perform.
+    Returns:
+    numpy.ndarray: A 2D array of shape (maxiter, 2), where each row contains the real and imaginary 
+                   parts of the complex number at each iteration.
+    """
     point_cloud = np.zeros((maxiter, 2))  # Preallocate array with zeros
     z = complex(0, 0)
     
@@ -11,6 +20,24 @@ def mandelbrot_point_cloud(c, maxiter):
     return point_cloud
 
 def mandelbrot(rmin, rmax, cmax, width, height, maxiter):
+    """
+    Generate a Mandelbrot set image.
+    This function computes the Mandelbrot set for a given range of real and imaginary values,
+    and returns a 2D array representing the fractal image. The computation is optimized by
+    skipping points inside the main cardioid and the period-2 bulb.
+    Parameters:
+        rmin (float): The minimum value of the real axis.
+        rmax (float): The maximum value of the real axis.
+        cmax (complex): The maximum value of the imaginary axis (only the imaginary part is used).
+        width (int): The width of the output image in pixels.
+        height (int): The height of the output image in pixels. If odd, it will be adjusted to the next even number.
+        maxiter (int): The maximum number of iterations to determine divergence.
+    Returns:
+        numpy.ndarray: A 2D array of shape (height, width) containing the Mandelbrot set.
+                       Each value represents the iteration count at which the point diverged,
+                       or 0 if the point is in the set.
+    """
+    
     # Ensure height is even for symmetry
     if height % 2 != 0:
         height += 1
